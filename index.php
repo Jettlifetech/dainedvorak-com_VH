@@ -3,10 +3,10 @@
 <head>
 
     <title>Linkscanner CLI Generator</title>
-    <?php include './0-dynamic-content/header.html';?>
+    <?php include '/var/www/dainedvorak.com/z_dev/public/php-dynamic-content/header.html';?>
 </head>
 <body>
-<?php include './0-dynamic-content/nav.html';?>
+<?php include '/var/www/dainedvorak.com/z_dev/public/php-dynamic-content/navbar.html';?>
 
 
 
