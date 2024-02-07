@@ -19,25 +19,42 @@
  <!-- Main Content -->
  <div class="container">
     <div class="row">
-        <div class="col-2"></div>
+        <div class="col-2">
+        <div class="blockcode">
+  <div class="header">Footer</div>
+  <div class="description">Footer</div>
+  <footer class="shadow">
+    <div
+      class="d-flex justify-content-between align-items-center mx-auto py-4 flex-wrap"
+      style="width: 80%"
+    >
+      <a href="/#" class="d-flex align-items-center p-0 text-dark">
+        <img alt="logo" src="../img/logo.png" width="30px" />
+        <span class="ms-4 h5 font-weight-bold">Devwares</span>
+      </a>
+      <small>&copy; Devwares, 2020. All rights reserved.</small>
+      <div>
+        <button class="btn btn-dark btn-flat p-2">
+          <i class="fa fa-facebook"></i>
+        </button>
+        <button class="btn btn-dark btn-flat p-2">
+          <i class="fa fa-twitter"></i>
+        </button>
+        <button class="btn btn-dark btn-flat p-2">
+          <i class="fa fa-instagram"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+</div>
+
+        </div>
         <div class="col-8">
             <!-- Card with Form -->
             <div class="card">
                 <div class="card-body">
-                    <form id="linkscannerForm">
-                        <div class="form-group">
-                            <label for="urlInput">Enter Website URL To Scan</label>
-                            <input type="text" class="form-control" id="urlInput" placeholder="https://example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="reportNameInput">Report name:</label>
-                            <input type="text" class="form-control" id="reportNameInput" placeholder="ReportName">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Generate CLI Command</button>
-                    </form>
-                    <div id="commandOutput" class="mt-4" style="display:none;">
-                        <textarea class="form-control" id="cliCommand" rows="3" readonly></textarea>
-                        <button class="btn btn-success mt-2" onclick="copyCommand()">Click-to-Copy</button>
+                    <div class=container-flex bg-dark>
+                        
                     </div>
                 </div>
             </div>
@@ -45,5 +62,6 @@
         <div class="col-2"></div>
     </div>
 </div>
+<?php include '/var/www/dainedvorak.com/z_dev/public/php-dynamic-content/footer.html';?>
 </body>
 </html>
