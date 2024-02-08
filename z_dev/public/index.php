@@ -85,23 +85,17 @@
 
 </script>
 <style>
-  #skillITEM {
-  border: 1.5px solid green;
-  margin-bottom: 1%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
   #checkmark {
     fill: #17aa1c;
-    width: 2%;
+    width: 5%;
     height: auto;
-    padding-bottom: 2px;
+    padding-bottom: 10px;
     margin-right: 10px;
                       }
   .hoverable {
     transition: background-color 0.2s ease;
     align-items: center;
-    padding: 1%;
+    padding: 2%;
     margin: 5px;
 }
 .hoverable:hover {
@@ -266,349 +260,8 @@
         </div>
 
         <div class="row skills-content">
-          <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              
-              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#technical_skills" type="button" role="tab" aria-controls="technical_skills" aria-selected="true">Technical Skills</button>
-              
-              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-marketing" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Marketing & Advertising</button>
-              
-              <button class="nav-link" id="nav-leadership-tab" data-bs-toggle="tab" data-bs-target="#nav-leadership" type="button" role="tab" aria-controls="nav-leadership" aria-selected="false">Leadership & Business Management</button>
-              
-              <button class="nav-link" id="nav-communication-tab" data-bs-toggle="tab" data-bs-target="#nav-communication" type="button" role="tab" aria-controls="nav-communication" aria-selected="false">Communication Skills</button>
-              
-              <button class="nav-link" id="nav-analytics-tab" data-bs-toggle="tab" data-bs-target="#nav-analytics" type="button" role="tab" aria-controls="nav-analytics" aria-selected="false">Analytical & Problem-Solving</button>
 
-
-            </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent">
-            
-            <div class="tab-pane fade show active" id="technical_skills" role="tabpanel" aria-labelledby="nav-home-tab">
-                            
-              <h3 class="mt-3">SEO Technical Skills </h3>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              
-              <p>Insert Technical Skills html markup</p>
-            </div>
-
-
-            <div class="tab-pane fade" id="nav-marketing" role="tabpanel" aria-labelledby="nav-marketing-tab">
-              
-              <h3 class="mt-3">Marketing & Advertising</h3>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <div class="row">
-                <div class="col">
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Advertising Techniques, Audience Targeting</div>
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Branding, Business Development</div>
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Campaign Management, Digital Marketing Skills</div>
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Content Development, Distribution, Analytics</div>
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Creative Thinking, Critical Thinking</div>
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Digital Media, Marketing, and Advertising Skills</div>
-      </div>
-      <div class="col">
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Google Ads, Google Advertising Certifications</div>
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Market Analysis, Research</div>
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Organic Search Campaign Management, Paid Advertising, Paid Search</div>
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Social Media Marketing, Optimization</div>
-            <div class="hoverable rounded" id="skillITEM">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                <path fill="#17aa1c"
-                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-              </svg>Strategic Deliverables, Strategy Development + Implementation</div>
-            </div>
-      </div>
-            </div>   
-            
-            <div class="tab-pane fade" id="nav-leadership" role="tabpanel" aria-labelledby="nav-leadership-tab">
-              
-              <h3 class="mt-3">Leadership & Business Management</h3>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              
-              <div class="row">
-                <div class="col">  
-
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Advanced Budgeting and Resource Allocation</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Agency Experience, Business Management, Planning</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Business Process Improvement, Company Growth</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Competitor Analysis</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Financial Management</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Leadership Skills, Management Experience</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-
-              
-                </svg>Operational Analytics, Efficiency</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-
-                </svg>Partnership, Performance Appraisal, Improvement</div>
-        </div>
-        <div class="col">
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Product Development, Productivity</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Project Management</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Revenue Generation, ROI Analysis</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Sales and Marketing Skills</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Strategic Business Planning, Strategic Planning Abilities</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Team Building, Support Skills</div>
-              </div>
-            </div>
-
-            </div>
-<!---------------------------------------------------------------------------------->
-            <div class="tab-pane fade" id="nav-analytics" role="tabpanel" aria-labelledby="nav-analytics-tab">
-                            
-              <h3 class="mt-3">Analytical & Problem-Solving</h3>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Analytical and Critical Thinking Skills</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Decisive and Effective Decision-Making</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Problem-Solving Expertise</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Advanced Budgeting and Resource Allocation Skills</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Campaign Management Proficiency</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Cloud Engineering Expertise on Amazon Web Services</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Data Analysis and Insightful Reporting</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Determination, Dependability</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Expertise in Business Administration and Process Automation</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Expertise in Client Website Analysis for Optimization</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Process Optimization, or Automation Expertise</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Quantitative Skills, Statistical and Operational Analysis Skills</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Self-Motivated, Self-Starter, Hard Worker</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Statistical and Operational Analysis Skills</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Strategic Business Planning Skills</div>
-                  <div class="hoverable rounded" id="skillITEM">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                      <path fill="#17aa1c"
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>Strong Client Relationship Management</div>
-
-
-            </div>
-
-            <div class="tab-pane fade" id="nav-communication" role="tabpanel" aria-labelledby="nav-communication-tab">
-                            
-              <h3 class="mt-3">Communication Skills</h3>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Adaptability to Changing Environments</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Commitment to Continuous Learning, Quality, and Excellence</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Company Culture, Cultural Awareness and Sensitivity</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Conflict Resolution Abilities</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Customer Relationship Management, Service</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Dependability and Responsibility</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Effective Client Communication Abilities</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Excellent Communication Skills (Written and Verbal)</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Innovation, Insightful</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Leadership Communicaiton, Teamwork and Collaboration Abilities</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Emotional Self Control</div>
-              <div class="hoverable rounded" id="skillITEM">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
-                  <path fill="#17aa1c"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Professionalism, Sensitivity</div>
-
-
-            </div>
-
-
-          </div>
-<!--           <div class="col-lg-6" data-aos="fade-up">
+          <div class="col-lg-6" data-aos="fade-up">
 
             <div class="progress">
               <span class="skill">SEO Expert With Over 10+ Years Experience for On-Page, Off-Page, and Technical optimization Expert <i class="val">95%</i></span>
@@ -654,14 +307,196 @@
             
             </div>
 
-          </div> -->
+          </div>
 
-                
-                      
+          <div class="container mt-3">
+            <br>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#home">Technical Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu1">Marketing and Advertising Skills
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Business and Management Skills
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu3">Communication and Interpersonal Skills
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu4">Analytical and Problem-Solving Skills
+                </a>
+              </li>
+            </ul>
+          
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div id="home" class="container tab-pane active"><br>
+                <h3>Technical Skills List</h3>
+                <div class="col col-md">
+                    <ul class="list-display">
+                      <div class="hoverable">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+        
+                          <path fill="#17aa1c"
+                            d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>Advanced Microsoft Office Skills with Integration  Capabilities
+                      </div>
+                      <div class="hoverable">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+        
+                          <path fill="#17aa1c"
+                            d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>Advanced PC Computer Skills
+                      </div>
+                      <div class="hoverable">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+        
+                          <path fill="#17aa1c"
+                            d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>Amazon Elastic Compute Cloud (EC2), Amazon Web Services (AWS)
+                      </div>
+                      <div class="hoverable">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+        
+                          <path fill="#17aa1c"
+                            d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>API Professional
+                      </div>
+                      <div class="hoverable">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+        
+                          <path fill="#17aa1c"
+                            d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>Artificial Intelligence
+                      </div>
+                      <div class="hoverable">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+        
+                          <path fill="#17aa1c"
+                            d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>Automation Testing
+                      </div>
+                    </ul>
                   </div>
         
             </div>
+              <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              
+                <div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Analytical and Critical Thinking Skills</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Decisive and Effective Decision-Making</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Problem-Solving Expertise</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Advanced Budgeting and Resource Allocation Skills</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Campaign Management Proficiency</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Cloud Engineering Expertise on Amazon Web Services</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Data Analysis and Insightful Reporting</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Determination, Dependability</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Expertise in Business Administration and Process Automation</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Expertise in Client Website Analysis for Optimization</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Process Optimization, or Automation Expertise</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Quantitative Skills, Statistical and Operational Analysis Skills</div>
+                <div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Self-Motivated, Self-Starter, Hard Worker</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Statistical and Operational Analysis Skills</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Strategic Business Planning Skills</div>
+<div class="hoverable">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
+  
+                    <path fill="#17aa1c"
+                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>Strong Client Relationship Management</div>
 
+              </div>
+
+              <div id="menu2" class="container tab-pane fade"><br>
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+              </div>
+            </div>
+          </div>
+
+      </div>
     </section><!-- End Skills Section -->
 
     <!-- ======= Facts Section ======= -->
@@ -1115,10 +950,10 @@
   <footer id="footer">
     <div class="container bg-dark text-white text-center p-3">
       <div class="copyright">
-        &copy; Copyright 2024<strong><span> JETTLIFE Tech</span></strong>
+        &copy; Copyright 2024<strong><span>JETTLIFE Tech</span></strong>
       </div>
       <div class="credits">
-        Designed by Daine Dvorak dba <a href="https://client.jettlifetech.com/">JETTLIFE Tech</a>
+        Designed by <a href="https://client.jettlifetech.com/">Daine Dvorak dba JETTLIFE Tech</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
