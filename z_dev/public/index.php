@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
 <?php include '/var/www/dainedvorak.com/z_dev/public/php-dynamic-content/header.html';?>
 </head>
 
@@ -147,7 +148,7 @@
               
               <div class="row">
                 <div class="col">
-				  <div class="hoverable rounded" id="skillITEM">
+				           <div class="hoverable rounded" id="skillITEM">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
                       <path fill="#17aa1c"
                         d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
@@ -254,13 +255,18 @@
             </div>
 
 
-            <div class="tab-pane fade" id="nav-marketing" role="tabpanel" aria-labelledby="nav-marketing-tab">
+            <div class="tab-content" id="nav-tabContent">
+            
+            <div class="tab-pane fade show active" id="technical_skills" role="tabpanel" aria-labelledby="nav-home-tab">
+                            
+              <h3 class="mt-3">SEO Technical Skills </h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               
-              <h3 class="mt-3">Marketing & Advertising</h3>
-              <p>Delve into my Marketing & Advertising expertise, where creativity meets strategy to deliver outstanding results. From crafting engaging content to leveraging the latest digital trends, my skills drive brand growth and connect with audiences effectively.</p>
               <div class="row">
                 <div class="col">
-            <div class="hoverable rounded" id="skillITEM">
+				           <div class="hoverable rounded" id="skillITEM">              
+              <h3 class="mt-3">Marketing & Advertising</h3>
+              <p>Delve into my Marketing & Advertising expertise, where creativity meets strategy to deliver outstanding results. From crafting engaging content to leveraging the latest digital trends, my skills drive brand growth and connect with audiences effectively.</p>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="checkmark">
                 <path fill="#17aa1c"
                   d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
@@ -410,6 +416,7 @@
             </div>
 <!---------------------------------------------------------------------------------->
             <div class="tab-pane fade" id="nav-analytics" role="tabpanel" aria-labelledby="nav-analytics-tab">
+            <div class="tab-pane fade show active" id="technical_skills" role="tabpanel" aria-labelledby="nav-home-tab">
                             
               <h3 class="mt-3">Analytical & Problem-Solving</h3>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

@@ -7,12 +7,12 @@ body {
 }
 
 a {
-  color: #149ddd;
+  color: #0066ff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #37b3ed;
+  color: #0066ff;
   text-decoration: none;
 }
 
@@ -654,14 +654,14 @@ section {
   box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
 }
 
-.portfolio-details .portfolio-info h3 {
+/* .portfolio-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #1b1a1a;
 }
-
+ */
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
@@ -677,9 +677,9 @@ section {
 }
 
 .portfolio-details .portfolio-description h2 {
-  font-size: 26px;
+  font-size: 35px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .portfolio-details .portfolio-description p {
