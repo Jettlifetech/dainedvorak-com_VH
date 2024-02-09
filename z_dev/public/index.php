@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include '/var/www/dainedvorak.com/z_dev/public/php-dynamic-content/header.html';?>
 </head>
 
 <body>
