@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"codegpt.apiKey": "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",
+		"codegpt.model": "ChatGPT",
+		"workbench.colorCustomizations": {
+			"activityBar.background": "#511935",
+			"titleBar.activeBackground": "#71234A",
+			"titleBar.activeForeground": "#FEFCFD"
+		},
+		"grammarly.selectors": [
+			{
+				"language": "html",
+				"scheme": "file",
+				"pattern": "z_dev/public/index.html"
+			},
+			{
+				"language": "html",
+				"scheme": "file",
+				"pattern": "portfolio/non-branded-keyword-strategy.html"
+			}
+		],
+		"cSpell.words": [
+			"Daine"
+		],
+		"cSpell.ignoreWords": [
+			"timeSavedjlt"
+		]
+	}
+}

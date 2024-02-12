@@ -123,13 +123,13 @@
                <img src="https://dainedvorak.com/z_dev/public/assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
                <h1 class="text-light"><a href="index.html">Daine Dvorak</a></h1>
                <div class="social-links mt-3 text-center">
-                  <a href="https://bit.ly/DainesLinkedIn" class="facebook"><i class="bx bxl-facebook"></i>
+                  <a href="https://bit.ly/DainesLinkedIn" target=”_blank” class="facebook"><i class="bx bxl-facebook"></i>
                   </a>
-                  <a href="https://bit.ly/DaineDLinkedIn2" class="linkedin"><i class="bx bxl-linkedin"></i>
+                  <a href="https://bit.ly/DaineDLinkedIn2" target=”_blank” class="linkedin"><i class="bx bxl-linkedin"></i>
                   </a>
-                  <a href="https://bit.ly/DDGitHub" class="github"><i class="bx bxl-github"></i>
+                  <a href="https://bit.ly/DDGitHub" target=”_blank” class="github"><i class="bx bxl-github"></i>
                   </a>
-                  <a href="https://bit.ly/DD_JETTLIFE" class="youtube"><i class="bx bxl-youtube"></i>
+                  <a href="https://bit.ly/DD_JETTLIFE" target=”_blank” class="youtube"><i class="bx bxl-youtube"></i>
                   </a>
 
                </div>
@@ -162,38 +162,12 @@
          <section id="breadcrumbs" class="breadcrumbs border-bottom shadow bg-dark text-white">
             <div class="container-fluid">
                <div class="d-flex justify-content-between align-items-center">
-                  <h1>{{showcase_page_title}}</h1>
+                  <h1>Schema Validator - Bookmarklet</h1>
                </div>
             </div>
          </section>
          <!-- End Breadcrumbs -->
-         <div class="col-lg">
-            <div class="container mt-5">
-               <div class="card shadow">
-                  <div class="card-header">
-                     <strong>Portfolio Item Details</strong>
-                  </div>
-                  <div class="card-body">
-                     <ul class="list-unstyled">
-                        <li class="mb-2 mt-0">
-                           <strong>Category</strong>:
-                           <ul>
-                              <li id="portfolio_category">{{portfolio_category}}</li>
-                           </ul>
-                        </li>
-                        <li>
-                           <strong>Key Skills Highlighted</strong>:
-                           <ul>
-                              <li id="skill_1_portfolio">{{skill_1_portfolio}}</li>
-                              <li id="skill_2_portfolio">{{skill_2_portfolio}}</li>
-                              <li id="skill_3_portfolio">{{skill_3_portfolio}}</li>
-                           </ul>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
+ 
          <!-- ======= Portfolio Details Section ======= -->
          <section id="portfolio-details" class="portfolio-details">
             <div class="container">
@@ -213,10 +187,46 @@
                         </div>
                         <div class="swiper-pagination"></div>
                      </div>
+                     <div class="col-lg">
+                        <div class="container mt-5">
+                           <div class="card shadow">
+                              <div class="card-header">
+                                 <strong>Portfolio Item Details</strong>
+                              </div>
+                              <div class="card-body">
+                                 <h4>What is a bookmarklet?</h4>
+                                    <p>Imagine you have a magic button in your bookmarks bar on the computer, right where you save your favorite websites to visit them again easily. A bookmarklet is like one of those buttons, but instead of taking you to another website, it does something special on the page you're already on when you click it.</p>
+            
+                                    <p> For example, if you're looking at a really long story and you want to make the letters bigger so it's easier to read, you could click on your magic button, and like magic, the letters grow bigger! Or, if you wanted to save a picture from the website to your computer, you could use another magic button to do that without having to ask an adult for help.</p>
+                                       
+                                    <p> So, a bookmarklet is like a tiny magic trick for your internet browser that makes doing things on websites quicker and more fun, without having to download or install anything new.</p>
+                                    <hr>
+                                 <ul class="list-unstyled">
+                                    <li class="mb-2 mt-0">
+                                       <strong>Category</strong>:
+                                       <ul>
+                                          <li id="portfolio_category">SEO, Automation, Innovation</li>
+                                       </ul>
+                                    </li>
+                                    <li>
+                                       <strong>Key Skills Highlighted</strong>:
+                                       <ul>
+                                          <li id="skill_1_portfolio">Bookmarklets</li>
+                                          <li id="skill_2_portfolio">Technical SEO - DOM Extraction</li>
+                                          <li id="skill_3_portfolio">JSON-LD & JavaScript</li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                      <div class="portfolio-description">
-                        <h2 class="display-2" id="h2_showcase_header">{{h2_showcase_header}}</h2>
+                        <h2 class="display-2" id="h2_showcase_header">Bookmarklet to
+                           Validate Schema</h2>
                         <h3 style="font-weight: 900;">Introduction:</h3>
                         <p>{{showcase_intoduction}}</p>
+                        <a href="https://dainedvorak.com/portfolio/bookmarklet-schema-validator/example-schema.html" target=”_blank” id="showcase_example_webpage_link">Example Webpage With Schema</a>
                         <h3 style="font-weight: 900;">Challenge:</h3>
                         <p>{{Challenge_Content}} </p>
                         <h3 style="font-weight: 900;">Strategy:</h3>
@@ -230,6 +240,7 @@
                            <li id="results_5">{{Results_Content_5}}</li>
                            <li id="results_6">{{Results_Content_6}}</li>
                         </ul>
+                        
                         <h3 style="font-weight: 900;">Impact:</h3>
                         <p>{{Impact_Content}}</p>
                         <h4 style="font-weight: 900;">Summary:</h4>
