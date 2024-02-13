@@ -112,6 +112,44 @@
          border: #17aa1c solid 2px;
          border-radius: 5%;
          }
+
+         /* ===== Buttons Css ===== */
+.call-action-one .call-action-content .call-action-btn .primary-btn {
+  background: #f18080;
+  
+  box-shadow: var(--shadow-2);
+}
+.call-action-one .call-action-content .call-action-btn .active.primary-btn, .call-action-one .call-action-content .call-action-btn .primary-btn:hover, .call-action-one .call-action-content .call-action-btn .primary-btn:focus {
+  background: var(--primary-dark);
+  color: var(--white);
+  box-shadow: var(--shadow-4);
+}
+.call-action-one .call-action-content .call-action-btn .deactive.primary-btn {
+  background: var(--gray-4);
+  color: var(--dark-3);
+  pointer-events: none;
+}
+
+/*===== call action one =====*/
+.call-action-one {
+  background-color: var(--light-2);
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.call-action-one .call-action-content .call-action-text {
+  margin-top: 50px;
+}
+.call-action-one .call-action-content .call-action-text .action-title {
+  font-weight: 600;
+  color: var(--black);
+}
+.call-action-one .call-action-content .call-action-text .text-lg {
+  color: var(--dark-3);
+  margin-top: 16px;
+}
+.call-action-one .call-action-content .call-action-btn {
+  margin-top: 50px;
+}
       </style>
    <body>
       <!-- ======= Mobile nav toggle button ======= -->
@@ -131,6 +169,7 @@
                   </a>
                   <a href="https://bit.ly/DD_JETTLIFE" class="youtube"><i class="bx bxl-youtube"></i>
                   </a>
+
                </div>
             </div>
             <nav id="navbar" class="nav-menu navbar">
@@ -161,12 +200,12 @@
          <section id="breadcrumbs" class="breadcrumbs border-bottom shadow bg-dark text-white">
             <div class="container-fluid">
                <div class="d-flex justify-content-between align-items-center">
-                  <h1>Website Maintenance Streamlined Process</h1>
+                  <h1>{{showcase_page_title}}</h1>
                </div>
             </div>
          </section>
          <!-- End Breadcrumbs -->
-         
+        
          <!-- ======= Portfolio Details Section ======= -->
          <section id="portfolio-details" class="portfolio-details">
             <div class="container">
@@ -186,6 +225,7 @@
                         </div>
                         <div class="swiper-pagination"></div>
                      </div>
+
                      <div class="col-lg">
                         <div class="container mt-5">
                            <div class="card shadow">
@@ -197,15 +237,15 @@
                                     <li class="mb-2 mt-0">
                                        <strong>Category</strong>:
                                        <ul>
-                                          <li id="portfolio_category">SEO, Automation</li>
+                                          <li id="portfolio_category">{{portfolio_category}}</li>
                                        </ul>
                                     </li>
                                     <li>
                                        <strong>Key Skills Highlighted</strong>:
                                        <ul>
-                                          <li id="skill_1_portfolio">Data Analysis</li>
-                                          <li id="skill_2_portfolio">Streamlining Business Processes</li>
-                                          <li id="skill_3_portfolio">Custom Formulas, Algorithums, and dynamic calculations</li>
+                                          <li id="skill_1_portfolio">{{skill_1_portfolio}}</li>
+                                          <li id="skill_2_portfolio">{{skill_2_portfolio}}</li>
+                                          <li id="skill_3_portfolio">{{skill_3_portfolio}}</li>
                                        </ul>
                                     </li>
                                  </ul>
@@ -214,27 +254,55 @@
                         </div>
                      </div>
                      <div class="portfolio-description">
-                        <h2 class="display-2" id="h2_showcase_header">Revolutionizing Website Maintenance with Innovative Workbook Solutions</h2>
+                        <h2 class="display-2" id="h2_showcase_header">{{h2_showcase_header}}</h2>
                         <h3 style="font-weight: 900;">Introduction:</h3>
-                        <p>In the dynamic field of digital marketing and website maintenance, efficiency and insight are paramount. I introduced a groundbreaking solution to overhaul the traditional, time-consuming process of website maintenance data collection and analysis.</p>
+                        <p>{{showcase_intoduction}}</p>
                         <h3 style="font-weight: 900;">Challenge:</h3>
-                        <p>The initial challenge was the laborious task of gathering data for numerous clients' websites, a process that took an hour on average per website, hindering timely and effective maintenance.</p>
-                        <h3 style="font-weight: 900;">Innovation:</h3>
-                        <p>Dvorak developed the Website Maintenance Workbook V1 and V2, transforming the data collection and analysis process:</p>
-<ul>
-<li><strong>V1 Overhaul:</strong>Automated data collection from multiple third-party tools into a streamlined process, reducing collection time to under 2 minutes. Introduced an "insights form" to prevent superficial reviews and enhance training for new team members.</li>
-<li><strong>V2 Enhancement:</strong> Simplified the workbook creation process and added visual charts for better data trend analysis, improving reliability and ease of use. </li>
-</ul>
-
-                        <h3 style="font-weight: 900;">Impact:</h3>
+                        <p>{{Challenge_Content}} </p>
+                        <h3 style="font-weight: 900;">Strategy:</h3>
+                        <p>{{Strategy_Content}}</p>
+                        <h3 style="font-weight: 900;">Results:</h3>
                         <ul>
-                           <li><strong>Time Savings: </strong>Reduced data collection time from 60 minutes to just 2 minutes, enabling more time for in-depth analysis.</li>
-                           <li><strong>Quality of Service:</strong>Improved service quality by mandating the creation of actionable insights for each website, enhancing client reports and future business opportunities.</li>
-                           <li><strong>Scalability and Training:</strong>The creation of a scalable template and detailed Standard Operating Procedures (SOPs) facilitated training and ensured consistency in quality across the team.</li>
-                           </ul>
+                           <li id="results_1">{{Results_Content_1}}</li>
+                           <li id="results_2">{{Results_Content_2}}</li>
+                           <li id="results_3">{{Results_Content_3}}</li>
+                           <li id="results_4">{{Results_Content_4}}</li>
+                           <li id="results_5">{{Results_Content_5}}</li>
+                           <li id="results_6">{{Results_Content_6}}</li>
+                        </ul>
+                        <h3 style="font-weight: 900;">Impact:</h3>
+                        <p>{{Impact_Content}}</p>
                         <h4 style="font-weight: 900;">Summary:</h4>
-                        <p id="port_summary"> Daine Dvorak's Website Maintenance Workbook stands as a testament to his ability to innovate and streamline processes, significantly enhancing efficiency and service quality in website maintenance. This initiative not only saved time but also fostered a culture of insight-driven maintenance strategies, showcasing Dvorak's invaluable contribution to operational excellence. </p>
+                        <p id="port_summary"> {{Summary_Content}} </p>
                      </div>
+                     <!--====== CALL TO ACTION ONE PART START ======-->
+<section class="call-action-area call-action-one">
+   <div class="container shadow border">
+      <div class="row align-items-center call-action-content">
+         <div class="col-xl-8 col-lg-8">
+            <div class="call-action-text">
+               <h2 class="action-title">
+                  Ready to create your startup <br />website?
+               </h2>
+               <p class="text-lg">
+                  AyroUI is here for you, download now and start building your web
+                  project.
+               </p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4">
+            <div class="call-action-btn rounded-buttons text-lg-end">
+               <a href="#" class="btn primary-btn rounded-full text-white">
+               Get Started Now
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- row -->
+   </div>
+   <!-- container -->
+</section>
+<!--====== CALL TO ACTION ONE PART ENDS ======-->
                   </div>
                </div>
             </div>
