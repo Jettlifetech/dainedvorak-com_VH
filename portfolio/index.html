@@ -10,22 +10,31 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="194x194" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/favicon-194x194.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://dainedvorak.com/z_dev/public/assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://dainedvorak.com/z_dev/public/assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194"
+    href="https://dainedvorak.com/z_dev/public/assets/img/favicon/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192"
+    href="https://dainedvorak.com/z_dev/public/assets/img/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://dainedvorak.com/z_dev/public/assets/img/favicon/favicon-16x16.png">
   <link rel="manifest" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/site.webmanifest">
-  <link rel="mask-icon" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/safari-pinned-tab.svg" color="#007cff">
+  <link rel="mask-icon" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/safari-pinned-tab.svg"
+    color="#007cff">
   <link rel="shortcut icon" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/favicon.ico">
   <meta name="msapplication-TileColor" content="#007cff">
-  <meta name="msapplication-TileImage" content="https://dainedvorak.com/z_dev/public/assets/img/favicon/mstile-144x144.png">
+  <meta name="msapplication-TileImage"
+    content="https://dainedvorak.com/z_dev/public/assets/img/favicon/mstile-144x144.png">
   <meta name="msapplication-config" content="https://dainedvorak.com/z_dev/public/assets/img/favicon/browserconfig.xml">
   <meta name="theme-color" content="#007cff">
 
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="https://dainedvorak.com/z_dev/public/assets/vendor/aos/aos.css" rel="stylesheet">
@@ -40,81 +49,88 @@
 
   <!-- Template Main CSS File -->
   <link href="https://dainedvorak.com/z_dev/public/assets/css/style.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"crossorigin="anonymous"></script>
-      <!--navbar script-->
-<script type="text/javascript">
-    
-  window.addEventListener("resize", function() {
-      "use strict"; window.location.reload(); 
-  });
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+    crossorigin="anonymous"></script>
+  <!--navbar script-->
+  <script type="text/javascript">
+
+    window.addEventListener("resize", function () {
+      "use strict"; window.location.reload();
+    });
 
 
-  document.addEventListener("DOMContentLoaded", function(){
+    document.addEventListener("DOMContentLoaded", function () {
 
       // make it as accordion for smaller screens
       if (window.innerWidth > 992) {
 
-          document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
-              
-              everyitem.addEventListener('mouseover', function(e){
+        document.querySelectorAll('.navbar .nav-item').forEach(function (everyitem) {
 
-                  let el_link = this.querySelector('a[data-bs-toggle]');
+          everyitem.addEventListener('mouseover', function (e) {
 
-                  if(el_link != null){
-                      let nextEl = el_link.nextElementSibling;
-                      el_link.classList.add('show');
-                       nextEl.classList.add('show');
-                  }
-                  
-              });
-              everyitem.addEventListener('mouseleave', function(e){
-                   let el_link = this.querySelector('a[data-bs-toggle]');
-                  
-                  if(el_link != null){
-                      let nextEl = el_link.nextElementSibling;
-                      el_link.classList.remove('show');
-                       nextEl.classList.remove('show');
-                  }
-                  
+            let el_link = this.querySelector('a[data-bs-toggle]');
 
-              })
+            if (el_link != null) {
+              let nextEl = el_link.nextElementSibling;
+              el_link.classList.add('show');
+              nextEl.classList.add('show');
+            }
+
           });
+          everyitem.addEventListener('mouseleave', function (e) {
+            let el_link = this.querySelector('a[data-bs-toggle]');
+
+            if (el_link != null) {
+              let nextEl = el_link.nextElementSibling;
+              el_link.classList.remove('show');
+              nextEl.classList.remove('show');
+            }
+
+
+          })
+        });
 
       }
       // end if innerWidth
-  }); 
-  // DOMContentLoaded  end
+    });
+    // DOMContentLoaded  end
 
-</script>
-<style>
-  #skillITEM {
-  border: 1.5px solid green;
-  margin-bottom: 1%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-  #checkmark {
-    fill: #17aa1c;
-    width: 2%;
-    height: auto;
-    padding-bottom: 2px;
-    margin-right: 10px;
-                      }
-  .hoverable {
-    transition: background-color 0.2s ease;
-    align-items: center;
-    padding: 1%;
-    margin: 5px;
-}
-.hoverable:hover {
-    background-color: lightgrey;
-    padding: 2%;
-    border: #17aa1c solid 2px;
-    border-radius: 5%;
-}
+  </script>
+  <style>
+    #skillITEM {
+      border: 1.5px solid green;
+      margin-bottom: 1%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    #checkmark {
+      fill: #17aa1c;
+      width: 2%;
+      height: auto;
+      padding-bottom: 2px;
+      margin-right: 10px;
+    }
+
+    .hoverable {
+      transition: background-color 0.2s ease;
+      align-items: center;
+      padding: 1%;
+      margin: 5px;
+    }
+
+    .hoverable:hover {
+      background-color: lightgrey;
+      padding: 2%;
+      border: #17aa1c solid 2px;
+      border-radius: 5%;
+    }
   </style>
 
 <body>
@@ -124,19 +140,20 @@
 
   <!-- ======= Header ======= -->
   <header id="header">
-    <div class="d-flex flex-column" >
+    <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="https://dainedvorak.com/z_dev/public/assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+        <img src="https://dainedvorak.com/z_dev/public/assets/img/profile-img.png" alt=""
+          class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Daine Dvorak</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="https://bit.ly/DainesLinkedIn" class="facebook"><i class="bx bxl-facebook"></i>
           </a>
           <a href="https://bit.ly/DaineDLinkedIn2" class="linkedin"><i class="bx bxl-linkedin"></i>
-          
+
           </a>
           <a href="https://bit.ly/DDGitHub" class="github"><i class="bx bxl-github"></i>
-            
+
             </o><a href="https://bit.ly/DD_JETTLIFE" class="youtube"><i class="bx bxl-youtube"></i>
             </a>
           </a>
@@ -146,14 +163,22 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="https://dainedvorak.com/z_dev/public/index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="https://dainedvorak.com/z_dev/public/index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About Me</span></a></li>
-          <li><a href="https://dainedvorak.com/z_dev/public/index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="https://dainedvorak.com/z_dev/public/index.html#workHistorydd" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span><h3></h3>Work History <span class="badge bg-success p-1"> New </span></h3>
-          </span></a></li>
-          <li><a href="https://dainedvorak.com/z_dev/public/showcase-details-template.html" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Daine Dvorak's Portfolio</span></a></li>
-          <li><a href="https://dainedvorak.com/z_dev/public/index.html#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="https://dainedvorak.com/z_dev/public/index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="https://dainedvorak.com/z_dev/public/index.html#hero" class="nav-link scrollto active"><i
+                class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="https://dainedvorak.com/z_dev/public/index.html#about" class="nav-link scrollto"><i
+                class="bx bx-user"></i> <span>About Me</span></a></li>
+          <li><a href="https://dainedvorak.com/z_dev/public/index.html#resume" class="nav-link scrollto"><i
+                class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="https://dainedvorak.com/z_dev/public/index.html#workHistorydd" class="nav-link scrollto"><i
+                class="bx bx-file-blank"></i> <span>
+                <h3></h3>Work History <span class="badge bg-success p-1"> New </span></h3>
+              </span></a></li>
+          <li><a href="https://dainedvorak.com/z_dev/public/showcase-details-template.html" class="nav-link scrollto"><i
+                class="bx bx-book-content"></i> <span>Daine Dvorak's Portfolio</span></a></li>
+          <li><a href="https://dainedvorak.com/z_dev/public/index.html#services" class="nav-link scrollto"><i
+                class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="https://dainedvorak.com/z_dev/public/index.html#contact" class="nav-link scrollto"><i
+                class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -165,7 +190,7 @@
       <div class="container">
         <div class="d-flex justify-content-between align-items-center ">
           <h1>Daine Dvorak Work History Portfolio</h1>
-      </div>
+        </div>
     </section>
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
@@ -201,55 +226,118 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-automation">
             <div class="portfolio-wrap" style="border-radius: 25px; border: 2px solid rgb(0, 0, 0);">
-              <img src="https://dainedvorak.com/portfolio/bookmarklet-serp-extractor/cover_url-extraction-bookmarklet-one-of-two.png" class="img-fluid" alt="URL SERP Extraction">
+              <img
+                src="https://dainedvorak.com/portfolio/bookmarklet-serp-extractor/cover_url-extraction-bookmarklet-one-of-two.png"
+                class="img-fluid" alt="URL SERP Extraction">
               <div class="portfolio-links">
-                <a href="https://dainedvorak.com/portfolio/bookmarklet-serp-extractor/cover-link-bookmarklet-url-extractor-from-search-results-webpage-developed-by-daine-dvorak-v2.gif" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox"
+                <a href="https://dainedvorak.com/portfolio/bookmarklet-serp-extractor/cover-link-bookmarklet-url-extractor-from-search-results-webpage-developed-by-daine-dvorak-v2.gif"
+                  data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="Bookmarklet URL SERP Extractor using bookmark automation custom made by Daine Dvorak"><i
                     class="bx bx-plus"></i></a>
-                <a href="https://dainedvorak.com/portfolio/bookmarklet-serp-extractor/index.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://dainedvorak.com/portfolio/bookmarklet-serp-extractor/index.html"
+                  title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
-        
-  
+
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-automation filter-innovate filter-seo">
             <div class="portfolio-wrap shadow" style="border-radius: 25px; border: 2px solid rgb(0, 0, 0);">
-              <img src="https://dainedvorak.com/portfolio/custom-chatgpt-model_schema-generator/cover_advanced-schema-generator-using-customgpt-by-daine-dvorak-v2.png" class="img-fluid border-radius-10" alt="">
+              <img
+                src="https://dainedvorak.com/portfolio/custom-chatgpt-model_schema-generator/cover_advanced-schema-generator-using-customgpt-by-daine-dvorak-v2.png"
+                class="img-fluid border-radius-10" alt="">
               <div class="portfolio-links">
-                <a href="https://dainedvorak.com/portfolio/custom-chatgpt-model_schema-generator/cover-2_custom-gpt-model-schema-wizard-by-daine-dvorak.gif" data-gallery="portfolioGallery" class="portfolio-lightbox border-radius-10" title="Web 3"><i class="bx bx-plus"></i></a>
-                       <a href="https://dainedvorak.com/portfolio/custom-chatgpt-model_schema-generator/index.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://dainedvorak.com/portfolio/custom-chatgpt-model_schema-generator/cover-2_custom-gpt-model-schema-wizard-by-daine-dvorak.gif"
+                  data-gallery="portfolioGallery" class="portfolio-lightbox border-radius-10" title="Web 3"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://dainedvorak.com/portfolio/custom-chatgpt-model_schema-generator/index.html"
+                  title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
-  
-       
-         
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dev">
+            <div class="portfolio-wrap shadow " style="border-radius: 25px; border: 2px solid rgb(0, 0, 0);">
+              <img src="https://dainedvorak.com/portfolio/coding/images/coding-excellence.png" class="img-fluid"
+                alt="Promotional graphic for Daine Dvorak, a skilled coding solutions developer, highlighting key skills in learning, innovation, and automation.">
+              <div class="portfolio-links">
+                <a href="https://dainedvorak.com/portfolio/coding/images/coding-excellence---cover-2.png"
+                  data-gallery="portfolioGallery" class="portfolio-lightbox"
+                  title="https://dainedvorak.com/portfolio/coding/images/coding-excellence---cover-2.png_title">
+                  <i class="bx bx-plus"></i>
+                </a>
+                <a href="https://dainedvorak.com/portfolio/coding/index.html" title="More Details">
+                  <i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dev">
+            <div class="portfolio-wrap  shadow " style="border-radius: 25px; border: 2px solid rgb(0, 0, 0);">
+              <img
+                src="https://dainedvorak.com/portfolio/seo-process-automation/google-app-scripts/gas---cover-image.png"
+                class="img-fluid" alt="" Promotional image for Daine Dvorak, highlighting expertise in Google App
+                Scripts Development with key skills in JavaScript and automation.">
+              <div class="portfolio-links">
+                <a href="https://dainedvorak.com/portfolio/seo-process-automation/google-app-scripts/gas---cover-image-2.png"
+                  data-gallery="portfolioGallery" class="portfolio-lightbox"
+                  title="https://dainedvorak.com/portfolio/seo-process-automation/google-app-scripts/gas---cover-image-2.png_title">
+                  <i class="bx bx-plus"></i>
+                </a>
+                <a href="https://dainedvorak.com/portfolio/seo-process-automation/index.html" title="More Details">
+                  <i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-automation">
+            <div class="portfolio-wrap  shadow " style="border-radius: 25px; border: 2px solid rgb(0, 0, 0);">
+              <img src="https://dainedvorak.com/portfolio/seo-process-automation/process-automation---cover-1.png" class="img-fluid" alt="Graphic showcasing Daine Dvorak's SEO Process Automation with key skills in custom formulas, innovation, and algorithms.">
+              <div class="portfolio-links">
+                <a href="https://dainedvorak.com/portfolio/seo-process-automation/process-automation---cover-2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="https://dainedvorak.com/portfolio/seo-process-automation/process-automation---cover-2.png_title">
+  <i class="bx bx-plus"></i>
+  </a>
+                <a href="https://dainedvorak.com/portfolio/seo-process-automation/index.html" title="More Details">
+  <i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-leadership">
+            <div class="portfolio-wrap shadow " style="border-radius: 25px; border: 2px solid rgb(0, 0, 0);">
+              <img src="https://dainedvorak.com/portfolio/leadership-and-management/images/management---cover-2.png" class="img-fluid" alt="Daine Dvorak's digital marketing team in a collaborative meeting, emphasizing leadership and employee growth for SEO excellence.">
+              <div class="portfolio-links">
+                <a href="https://dainedvorak.com/portfolio/leadership-and-management/images/management---cover.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="https://dainedvorak.com/portfolio/leadership-and-management/images/management---cover.png_title">
+  <i class="bx bx-plus"></i>
+  </a>
+                <a href="https://dainedvorak.com/portfolio/leadership-and-management/index.html" title="More Details">
+  <i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
 
         </div>
 
       </div>
     </section>
-  
 
-</div>
-      </div>
 
     </div>
-  </section> 
-  <!-- Vendor JS Files -->
-  <script src="https://dainedvorak.com/z_dev/public/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="https://dainedvorak.com/z_dev/public/assets/vendor/aos/aos.js"></script>
-  <script src="https://dainedvorak.com/z_dev/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://dainedvorak.com/z_dev/public/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="https://dainedvorak.com/z_dev/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="https://dainedvorak.com/z_dev/public/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="https://dainedvorak.com/z_dev/public/assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="https://dainedvorak.com/z_dev/public/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="https://dainedvorak.com/z_dev/public/assets/vendor/php-email-form/validate.js"></script>
+    </div>
 
-  <!-- Template Main JS File -->
-  <script src="https://dainedvorak.com/z_dev/public/assets/js/main.js"></script>
+    </div>
+    </section>
+    <!-- Vendor JS Files -->
+    <script src="https://dainedvorak.com/z_dev/public/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="https://dainedvorak.com/z_dev/public/assets/vendor/aos/aos.js"></script>
+    <script src="https://dainedvorak.com/z_dev/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://dainedvorak.com/z_dev/public/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="https://dainedvorak.com/z_dev/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="https://dainedvorak.com/z_dev/public/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://dainedvorak.com/z_dev/public/assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="https://dainedvorak.com/z_dev/public/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="https://dainedvorak.com/z_dev/public/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="https://dainedvorak.com/z_dev/public/assets/js/main.js"></script>
 
 </body>
 
