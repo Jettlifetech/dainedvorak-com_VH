@@ -3,9 +3,9 @@
    <head>
       <meta charset="utf-8">
       <meta content="width=device-width, initial-scale=1.0" name="viewport">
-      <title>Daine Dvorak's Portfolio - 2024 - Home</title>
-      <meta content="" name="description">
-      <meta content="" name="keywords">
+      <title>Daine Dvorak 's Bookmarklet for Easy Schema Validation - Enhance Web SEO</title>
+      <meta content="Discover the magic of a bookmarklet for schema validation. Streamline web development with a click, boosting SEO and team efficiency." name="description">
+      <meta content="schema validator, bookmarklet, SEO automation, technical SEO, JSON-LD, JavaScript, web development innovation, schema markup validation, Daine Dvorak" name="keywords">
       <!-- Favicons -->
       <link rel="apple-touch-icon" sizes="180x180" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="https://dainedvorak.com/z_dev/public/assets/img/favicon/favicon-32x32.png">
@@ -41,17 +41,11 @@
          window.addEventListener("resize", function() {
              "use strict"; window.location.reload(); 
          });
-         
-         
-         document.addEventListener("DOMContentLoaded", function(){
-         
+         document.addEventListener("DOMContentLoaded", function(){         
              // make it as accordion for smaller screens
-             if (window.innerWidth > 992) {
-         
-                 document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
-                     
-                     everyitem.addEventListener('mouseover', function(e){
-         
+             if (window.innerWidth > 992) {         
+                 document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){                     
+                     everyitem.addEventListener('mouseover', function(e){         
                          let el_link = this.querySelector('a[data-bs-toggle]');
          
                          if(el_link != null){
@@ -59,7 +53,6 @@
                              el_link.classList.add('show');
                               nextEl.classList.add('show');
                          }
-                         
                      });
                      everyitem.addEventListener('mouseleave', function(e){
                           let el_link = this.querySelector('a[data-bs-toggle]');
@@ -68,12 +61,9 @@
                              let nextEl = el_link.nextElementSibling;
                              el_link.classList.remove('show');
                               nextEl.classList.remove('show');
-                         }
-                         
-         
+                         }                                  
                      })
-                 });
-         
+                 });         
              }
              // end if innerWidth
          }); 
