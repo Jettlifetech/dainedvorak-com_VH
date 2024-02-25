@@ -1,0 +1,90 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+<!--navbar script-->
+<script type="text/javascript">
+
+	window.addEventListener("resize", function() {
+		"use strict"; window.location.reload(); 
+	});
+
+
+	document.addEventListener("DOMContentLoaded", function(){
+
+		// make it as accordion for smaller screens
+		if (window.innerWidth > 992) {
+
+			document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
+				
+				everyitem.addEventListener('mouseover', function(e){
+
+					let el_link = this.querySelector('a[data-bs-toggle]');
+
+					if(el_link != null){
+						let nextEl = el_link.nextElementSibling;
+						el_link.classList.add('show');
+				 		nextEl.classList.add('show');
+					}
+					
+				});
+				everyitem.addEventListener('mouseleave', function(e){
+				 	let el_link = this.querySelector('a[data-bs-toggle]');
+					
+					if(el_link != null){
+						let nextEl = el_link.nextElementSibling;
+						el_link.classList.remove('show');
+				 		nextEl.classList.remove('show');
+					}
+					
+
+				})
+			});
+
+		}
+		// end if innerWidth
+	}); 
+	// DOMContentLoaded  end
+
+</script>
+
+<!-- ============= NavBar START ============== -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://local.brokenlinksfinder.com/prod/assets/images/jettlife-tech-logo-web_optimized.png"
+                    alt="JETTLIFE Tech Company Logo" width="auto" height="24"
+                    class="d-inline-block align-text-top ml-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"> <a class="nav-link" href="https://local.brokenlinksfinder.com/dev/ux-php/homepage/home.php">Home </a> </li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Test Our Broken Links Scanner </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Subscription Plans </a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> User Profile </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"> 
+                                My Profile
+                                </a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"> 
+                                Start New Broken Link Scan
+                                </a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                Profile Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> <!-- navbar-collapse.// -->
+        </div> <!-- container-fluid.// -->
+    </nav>
+</div><!-- container //  -->
