@@ -1,0 +1,5 @@
+{
+    "ResumeModify-v2": "Task: Modify my resume for the following job description:\n\n<insert_biz_info>",
+    "Customize Resume, and Get 2 Cover Letters - v1.0": "Task: Create a resume and two cover letters aligning with the job description:\n\n<insert_biz_info>",
+    "Basic Resume Optimizer Prompt - and Cover Letter Gen": "Optimize my resume and generate a tailored cover letter for the following:\n\n<insert_biz_info>"
+}

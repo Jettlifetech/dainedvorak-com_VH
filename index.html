@@ -14,10 +14,12 @@
     gtag('config', 'G-R5YXDWMZEV');
   </script>
 
+<link rel="preload" href="main.js" as="script" />
+
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <link async
+  <link preload
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+    as="stylesheet">
   <meta
     content="Unlock the secret to skyrocketing your website's rankings! Discover how a Technical SEO Expert can transform your online presence. Maximize traffic now!"
     name="description">
@@ -46,17 +48,21 @@
   <!-- Favicons -->
   <script>
     $(document).ready(function(){
-        $(window).scroll(function() {
-            $('section').each(function() {
-                if($(window).scrollTop() >= $(this).offset().top) {
-                    var id = $(this).attr('id');
-                    $('.nav-link').removeClass('active');
-                    $('.nav-link[href="#'+id+'"]').addClass('active');
-                }
-            });
+      $(window).scroll(function() {
+        var scrollPos = $(document).scrollTop();
+        $('.nav-link').each(function() {
+          var currLink = $(this);
+          var refElement = $(currLink.attr("href"));
+          if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.nav-link').removeClass("active");
+            currLink.addClass("active");
+          } else {
+            currLink.removeClass("active");
+          }
         });
+      });
     });
-    </script>
+  </script>
     
   <link rel="apple-touch-icon" sizes="180x180"
     href="https://dainedvorak.com/assets/favicon_resources/prod/apple-touch-icon.png">
@@ -155,7 +161,7 @@
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
               <span>Contact</span></a></li>
 
-          <li><a href="https://dainedvorak.com/schedule-meeting-with-daine-dvorak.html" class="nav-link">
+          <li><a  rel="prefetch" href="https://dainedvorak.com/schedule-meeting-with-daine-dvorak.html" class="nav-link">
               <i class="bx bx-calendar"></i>
               <span>Schedule Interview</span></a>
           </li>
@@ -185,9 +191,10 @@
         <div class="section-title">
           <h1>Learn About Daine Dvorak Work History</h1>
           <p>
-            Leveraging over 10 years of expertise in SEO and business process automation and 5 years of experience in
-            technology, including cloud engineering, web development, and more, I specialize in leading projects that
-            enhance efficiency through automation and strengthen web presence with tailored SEO strategies.
+            Leveraging over a decade of SEO expertise + deliverables automation and 5 years of experience in
+            technology, including AWS & GCP cloud engineering, web development, innovative tool development, I specialize in leading projects that
+            enhance efficiency through automation and strengthen web presence with tailored SEO strategies for On-Page, Off-Page, and Technical SEO. Combined with my Prompt Enginerring and AI Certifications keeping me at the forfront of 
+            the latest technologies and trends.
           </p>
         </div>
 
@@ -2078,7 +2085,7 @@
         Designed by Daine Dvorak
       </div>
       <div class="copyright">
-        &copy; Copyright 2024 <strong><span>JETTLIFE Tech</span></strong>
+        &copy; Copyright 2025 <strong><span>JETTLIFE Tech</span></strong>
       </div>
     </div>
   </footer><!-- End  Footer -->
