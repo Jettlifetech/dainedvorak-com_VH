@@ -48,21 +48,38 @@
   <!-- Favicons -->
   <script>
     $(document).ready(function(){
-      $(window).scroll(function() {
-        var scrollPos = $(document).scrollTop();
-        $('.nav-link').each(function() {
-          var currLink = $(this);
-          var refElement = $(currLink.attr("href"));
-          if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('.nav-link').removeClass("active");
-            currLink.addClass("active");
-          } else {
-            currLink.removeClass("active");
-          }
+        // Initialize on load
+        highlightNav();
+        
+        // Throttle scroll events
+        let isScrolling;
+        $(window).scroll(function() {
+            window.clearTimeout(isScrolling);
+            isScrolling = setTimeout(highlightNav, 100);
         });
-      });
+
+        function highlightNav() {
+            var scrollPos = $(document).scrollTop() + 100; // Add offset for better accuracy
+            $('.nav-link').each(function() {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                
+                if (refElement.length) {
+                    var elemTop = refElement.offset().top;
+                    var elemBottom = elemTop + refElement.outerHeight();
+                    
+                    if (elemTop <= scrollPos && elemBottom > scrollPos) {
+                        $('.nav-link').removeClass("active");
+                        currLink.addClass("active");
+                    }
+                    else {
+                        currLink.removeClass("active");
+                    }
+                }
+            });
+        }
     });
-  </script>
+</script>
     
   <link rel="apple-touch-icon" sizes="180x180"
     href="https://dainedvorak.com/assets/favicon_resources/prod/apple-touch-icon.png">
@@ -146,14 +163,12 @@
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
               <span>Resumes</span></a></li>
 
-          <li><a href="#schoolDD" class="nav-link scrollto"><i class="bx bx-bus-school"></i>
-              <span>Education</span></a></li>
-
-          <li><a href="#workHistory2" class="nav-link scrollto"><i class="bx bx-briefcase"></i>
-              <span>Work History</span></a></li>
-
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-folder-plus"></i>
-              <span>Portfolio</span></a></li>
+              
+              <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-folder-plus"></i>
+                <span>Portfolio</span></a></li>
+         
+                <li><a href="#WorkandSchool" class="nav-link scrollto"><i class="bx bx-bus-school"></i>
+                    <span>Work History & Education</span></a></li>
 
           <li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-user-voice"></i>
               <span>Testimonials</span></a></li>
@@ -217,7 +232,7 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>December 30, 1991</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.DaineDvorak.com</span>
                   </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+(913) 229-4694</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+(913) 710-5841</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Overland Park, Kansas USA</span>
                   </li>
                 </ul>
@@ -1199,7 +1214,7 @@
               </div>
             </div>
 
-            <h3 class="resume-title" id="schoolDD">Education</h3>
+            <h3 class="resume-title" id="WorkandSchool">Education</h3>
             <div class="resume-item">
               <h4>GENERAL STUDIES & DATA SCIENCE</h4>
               <h5>2010 - 2012</h5>
@@ -1222,7 +1237,7 @@
 
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="row" id="workHistory2">
+            <div class="row">
               <div class="col-lg" data-aos="fade-up">
                 <h3 class="resume-title">Work History</h3>
                 <div class="resume-item">
@@ -1499,7 +1514,6 @@
             </div>
 
     </section><!-- End Resume Section -->
-
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
@@ -1706,6 +1720,7 @@
 
       </div>
     </section><!-- End Portfolio Section -->
+
     <hr>
 
     <!-- ======= Testimonials Section ======= -->
@@ -2043,7 +2058,7 @@
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p><a href="tel:+19132294694">+1 (913) 229-4694</a></p>
+                <p><a href="tel:+19137105841">+1 (913) 710-5841</a></p>
               </div>
               <div><img
                   src="https://google.com/maps/vt/data=Z-jhZxj-PVj47gTEtK0lJTN1bLmlRolAUq6dyL-ILt4mF7JKn_UPz7Aql74-gl3q7IKXHiWjsNHcKbR3p3Sh2mgQOAVI65dnSN2Z0N0ZdhUKdZes8IyDQj6BlGv_XDi1u9sw14e3kHgjbQJ-Zu_7YJjMrQIeq2Dy3P9U5HVJSzDjP2Ilqjrn2e7OsRvdL0nuZvNKEggC0_WIjZOk0sNlC6rm1mbAQFFy3Q0b7EZoYQ52-q12WMyVIXILNR2OF7_FAFRTXTYWLXukLKS5OBadD8A2UM_6u0CTjPmZARKfxgI3lmUoxxiO3cBax4YyVgH0eGM09dFoOJtQRA7EJBBxMoOKg7I7h4nNfbvus6rCjVxLbhI4mBlSq1JV1rdA_x8DWxlFIvxowE-L9hJqhjiQCY_A4LgaS3VaF2q4rQ"
@@ -2109,7 +2124,7 @@
 
 
   <!-- Template Main JS File -->
-  <script defer src="https://dainedvorak.com/assets/js/main.js"></script>
+  <script src="https://dainedvorak.com/assets/js/main.js" async></script>
   <!--Added the below to the main.js but need to test functionality-->
   <script>
     function toggleElements() {
@@ -2220,7 +2235,7 @@
       "name": "Daine Dvorak",
       "image": "https://dainedvorak.com/images/profile-img.jpg",
       "email": "dainedvorak@gmail.com",
-      "telephone": "+913 229 4694",
+      "telephone": "+913 710 5841",
       "birthDate": "1991-12-30",
       "address": {
         "@type": "PostalAddress",

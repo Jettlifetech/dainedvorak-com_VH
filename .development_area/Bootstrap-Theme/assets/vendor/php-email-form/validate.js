@@ -1,7 +1,7 @@
 /**
 * PHP Email Form Validation - v3.2
 * URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
+* Author: Daine Dvorak dba  JETTLIFE Tech
 */
 (function () {
   "use strict";
