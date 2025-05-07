@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Certification Gallery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    .container { margin-top: 40px; margin-bottom: 40px; }
+    .card { max-width: 380px; }
+    .card-image-wrapper { display: flex; width: 100%; height: 50%; background-color: darkgrey; cursor: pointer; }
+    .card-img-top { display: block; width: auto; max-height: 100%; margin: auto; }
+    hr.thick { height: 2px; background-color: grey; border: none; }
+    .modal-img { width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row row-cols-1 row-cols-md-3">
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Prompt Engineering on DeepLearning.AI.</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-1">Prompt design</span>
+<span class="badge badge-pill badge-secondary p-2 mb-1">Few-shot and zero-shot prompting</span>
+<span class="badge badge-pill badge-secondary p-2 mb-1">Chain-of-thought prompting</span>
+<span class="badge badge-pill badge-secondary p-2 mb-1">LLM output evaluation</span>
+<span class="badge badge-pill badge-secondary p-2 mb-1">Task-specific prompt engineering</span>
+          </div>
+          <a href="#" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> DeepLearning.AI & OpenAI</p>
+          <p><strong>Date Issued:</strong> 2024-04-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Google Analytics 4 (GA4) Essential Training</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Google Analytics</span>
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/107312309b517ba21cbae25d3f0e9d7519ae61bc37076a156c2d3209fa459dcc?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BW4fIDOQ7TGWM1d%2F2qKQ8Rg%3D%3D" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> Google Analytics Academy</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Google Tag Manager Fundamentals</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Google Tag Manager</span>
+          </div>
+          <a href="#" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> Google Analytics Academy</p>
+          <p><strong>Date Issued:</strong> 2024-02-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Certificate of Excellence Nodejs Fundamentals</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">NodeJS</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">JavaScript</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">jQuery</span>
+
+
+          </div>
+          <a href="#" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> Google Developers Launchpad</p>
+          <p><strong>Date Issued:</strong> 2024-01-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Creating GPTs with Actions</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">ChatGPT</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Chatbot Development</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Custom API Building</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Custom GPT Building</span>
+
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/014b2734e56a0e32d9ba11d4d2a70d6e2e0d93c1350682ca8d3c6d759a17bd21?trk=share_certificate" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn</p>
+          <p><strong>Date Issued:</strong> 2025-02-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Career Essentials in Generative AI by Microsoft and LinkedIn</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Generative AI</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Computer Ethics</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Artificial Intelligence (AI)</span>
+
+
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/d3fc695b0770c2f0b1f31d117e8f869e4f5cc7d501d3a8ff045e86ef05803c24?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BRxWB8lMWQJ62oU78UM8WYA%3D%3D" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">What Is Generative AI?</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Generative AI</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Artificial Intelligence (AI)</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Generative AI Tools</span>
+
+
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/e3d422c4c3392700df85831b198c73fa7f62c87c37bd193d5b475329984fdea2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BLS5jAOqNSBS7JdWLttznug%3D%3D" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Introduction to Artificial Intelligence</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Artificial Intelligence for Business</span>
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/b786c639794d174f14980b796f1c9d361873eddbe7e7b62b19f910cd16ed5657?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BW4fIDOQ7TGWM1d%2F2qKQ8Rg%3D%3D" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Generative AI_ The Evolution of Thoughtful Online Search</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Generative AI</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Artificial Intelligence for Business</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Search Engine Technology</span>
+
+
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/7c24da38d1c6138e8e7498ad79435298dc636ef44701b1234768c2fcd460ba06?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BRxWB8lMWQJ62oU78UM8WYA%3D%3D" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Prompt Engineering: How to Talk to the AIs </h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-1">Generative AI</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Large Language Models (LLM)</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Prompt Engineering</span>
+
+
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/7f311b1b79b3f3e7d695da437ba80b24fc8387ff7215efd73b6499fa919f9514?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BRxWB8lMWQJ62oU78UM8WYA%3D%3D" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-04-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Introduction to Large Language Models</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Large Language Models (LLM)</span>
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/00d9c78ea12daae54c02bdffc6551f06eb12d1681e0fced140ba82781bfc941a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BLS5jAOqNSBS7JdWLttznug%3D%3D" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Learning Microsoft 365 Copilot</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Microsoft Copilot</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Microsoft 365</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Artificial Intelligence for Business</span>
+
+
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/ec331597139bddc996f69a234927cbb743f99a4920b37f97b48dfa789f9182a3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BLS5jAOqNSBS7JdWLttznug%3D%3D" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Ethics in the Age of Generative AI</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Responsible AI</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Generative AI</span>
+<span class="badge badge-pill badge-secondary p-2 mb-4">Computer Ethics</span>
+
+
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/51091c855589224ed5accf9b62277f586a01943c8c15f61909bb9c4dd1b7f174?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BRxWB8lMWQJ62oU78UM8WYA%3D%3D" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Learning REST APIs</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">REST APIs</span>
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/cbd521d0049f22cc5728ef30c2d2973a71b3ead6699577889cd7a8ceec259af1?trk=share_certificate" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2025-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">GitHub Certification</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Git CLI</span>
+          </div>
+          <a href="#" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Becoming More Memorable and Persuasive</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">Personal Branding</span>
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/72d31d839d81f1a04fbf31788958309de9f09662a2c6e60a58744492f5795c2a?trk=share_certificate" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2024-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col mb-4">
+      <div class="card shadow rounded border border-dark" style="border-radius: 10px;">
+        <div class="card-image-wrapper" onclick="showModal(this)">
+          <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Certificate Image">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title font-weight-bold">Creating API Documentation</h5>
+          <hr class="thick">
+          <div class="mb-1">
+            <p>Core Skills</p>
+            <span class="badge badge-pill badge-secondary p-2 mb-4">API Documentation</span>
+          </div>
+          <a href="https://www.linkedin.com/learning/certificates/547d018ea8c3f8e41570a680ecea65110ed1cc02c4812169c5b28a9ec199137f?trk=share_certificate" class="btn btn-success mt-3 rounded shadow">View Certification</a>
+        </div>
+        <div class="card-footer text-center">
+          <p><strong>Certificate Organization:</strong> LinkedIn Learning Certificate</p>
+          <p><strong>Date Issued:</strong> 2025-03-01</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modalImage" src="" class="modal-img">
+        <hr class="thick">
+        <div id="modalSkills"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function showModal(card) {
+    const imageSrc = card.querySelector('img').src;
+    const title = card.parentElement.querySelector('.card-title').innerText;
+    const skillsHTML = card.parentElement.querySelector('.mb-1').innerHTML;
+    document.getElementById('modalImage').src = imageSrc;
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalSkills').innerHTML = skillsHTML;
+    $('#imageModal').modal('show');
+  }
+</script>
+</body>
+</html>

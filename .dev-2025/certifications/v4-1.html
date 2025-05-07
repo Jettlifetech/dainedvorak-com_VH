@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daine Dvorak certifications </title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- jQuery (for convenience) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Custom Styles for Animated Gradient & Themes -->
+  <style>
+    /* ========== Animated Gradient for Jumbotron ========== */
+    .animated-gradient {
+      position: relative;
+      color: #fff;
+      background: linear-gradient(-45deg, #3a3a3a, #6c757d, #343a40, #495057);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* ========== Theme Classes (Dynamically Applied) ========== */
+    /* Each theme changes overall page background, text color, or accent elements. */
+    /* You can expand or adjust them as you see fit. */
+    body.galaxy-theme {
+      background: radial-gradient(circle, #1a1a2e 0%, #16213e 70%, #0f3460 100%);
+      color: #ffffff;
+    }
+    body.cosmos-theme {
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: #ffffff;
+    }
+    body.universe-theme {
+      background: linear-gradient(to right, #1f4037, #99f2c8);
+      color: #fff;
+    }
+    body.spaceman-theme {
+      background: linear-gradient(to right, #373b44, #4286f4);
+      color: #ffffff;
+    }
+    body.nebula-theme {
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: #ffffff;
+    }
+    body.rocketships-theme {
+      background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+      color: #222;
+    }
+    body.usflag-theme {
+      background: linear-gradient(to right, #bd1e24, #fff, #002868);
+      color: #222;
+    }
+
+    /* Make sure the nav, jumbotron, carousel, footer stand out from body background */
+    .theme-bg {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Navbar transparency to see theme in the background (optional) */
+    .navbar-custom {
+      background-color: #000000;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    
+    /* Certificate card styles */
+    .cert-card {
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+    }
+    
+    /* Certificate image */
+    .cert-image {
+      max-height: 300px;
+      object-fit: contain;
+    }
+    
+    /* Modal styles */
+    .modal-image {
+      max-height: 80vh;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    
+    /* Enhanced Carousel customization for multi-items with fade effects */
+    .carousel-multi-item {
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .carousel-multi-item .carousel-inner {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    
+    .carousel-multi-item .carousel-item {
+      display: block;
+      flex: 0 0 auto;
+      transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+      margin-right: -100%; /* Needed for proper sliding */
+    }
+    
+    .carousel-multi-item .carousel-item.active,
+    .carousel-multi-item .carousel-item-next,
+    .carousel-multi-item .carousel-item-prev {
+      display: flex;
+    }
+    
+    /* Fade effect for outgoing and incoming cards */
+    .carousel-multi-item .carousel-item-next:not(.carousel-item-start),
+    .carousel-multi-item .carousel-item-prev:not(.carousel-item-end) {
+      opacity: 0;
+    }
+    
+    .carousel-multi-item .active.carousel-item-start,
+    .carousel-multi-item .carousel-item-prev:not(.carousel-item-end) {
+      transform: translateX(-33.33%);
+      opacity: 0;
+    }
+    
+    .carousel-multi-item .active.carousel-item-end,
+    .carousel-multi-item .carousel-item-next:not(.carousel-item-start) {
+      transform: translateX(33.33%);
+      opacity: 0;
+    }
+    
+    .carousel-multi-item .carousel-item-next.carousel-item-start,
+    .carousel-multi-item .carousel-item-prev.carousel-item-end {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    /* Card item layout styles */
+    .cert-card-container {
+      padding: 0 0.5rem;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: rgba(0,0,0,0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+    
+    @media (min-width: 992px) {
+      /* Desktop: 3 cards per view */
+      .cert-card-container {
+        width: 33.333%;
+      }
+    }
+    
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      /* Tablet: 2 cards per view */
+      .cert-card-container {
+        width: 50%;
+      }
+      
+      .carousel-multi-item .active.carousel-item-start,
+      .carousel-multi-item .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-50%);
+      }
+      
+      .carousel-multi-item .active.carousel-item-end,
+      .carousel-multi-item .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(50%);
+      }
+    }
+    
+    @media (max-width: 767.98px) {
+      /* Mobile: 1 card per view */
+      .cert-card-container {
+        width: 100%;
+      }
+      
+      .carousel-multi-item .active.carousel-item-start,
+      .carousel-multi-item .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-100%);
+      }
+      
+      .carousel-multi-item .active.carousel-item-end,
+      .carousel-multi-item .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(100%);
+      }
+    }
+
+    .carousel-indicators {
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ccc;
+      opacity: 0.5;
+    }
+    
+    .carousel-indicators .active {
+      background-color: #fff;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="galaxy-theme"> <!-- default theme -->
+  <!-- ========== Navbar ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://code.jetlifecdn.com/jettlife-custom-themes/logo/jettlife-tech-white-text-menu.png"
+          alt="JETTLIFE Logo"
+          style="max-height: 40px;"
+          class="img-fluid"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Right-side links -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="https://dainedvorak.com/">Back To DaineDvorak.com</a></li>
+
+          <!-- Theme Switcher -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="themeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Switch Theme
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+              <li><a class="dropdown-item theme-option" data-theme="galaxy-theme" href="#">Galaxy</a></li>
+              <li><a class="dropdown-item theme-option" data-theme="cosmos-theme" href="#">Cosmos</a></li>
+              <li><a class="dropdown-item theme-option" data-theme="universe-theme" href="#">Universe</a></li>
+              <li><a class="dropdown-item theme-option" data-theme="spaceman-theme" href="#">Spaceman</a></li>
+              <li><a class="dropdown-item theme-option" data-theme="nebula-theme" href="#">Nebula</a></li>
+              <li><a class="dropdown-item theme-option" data-theme="rocketships-theme" href="#">Rocket Ships</a></li>
+              <li><a class="dropdown-item theme-option" data-theme="usflag-theme" href="#">U.S. Flag</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- ========== End Navbar ========== -->
+
+  <!-- ========== Certifications Section ========== -->
+  <div class="container-fluid mt-2">
+    <h2 class="text-center mb-4">My Certifications</h2>
+    
+    <div id="certCarousel" class="carousel slide carousel-multi-item mb-5" data-bs-ride="carousel" data-bs-interval="5000" data-bs-touch="true">
+      <!-- Add indicators -->
+      <div class="carousel-indicators" id="certCarouselIndicators">
+        <!-- Will be populated by JavaScript -->
+      </div>
+
+      <div class="carousel-inner" id="certCarouselInner">
+        <!-- Carousel items populated by JavaScript below -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#certCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#certCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- ========== End Certifications Section ========== -->
+
+  <!-- ========== Certificate Modal ========== -->
+  <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" id="certModalLabel">Certificate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalImage" src="" alt="Certificate" class="modal-image">
+          <div class="mt-3">
+            <h4 id="modalTitle" class="text-dark"></h4>
+            <div id="modalBadges" class="my-2"></div>
+            <div id="modalInfo" class="alert alert-secondary mt-3">
+              <p class="mb-0 text-dark" id="modalOrg"></p>
+              <p class="mb-0 text-dark" id="modalDate"></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a id="modalLink" href="#" target="_blank" class="btn btn-primary">View Certificate</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========== End Certificate Modal ========== -->
+
+  <!-- ========== Footer ========== -->
+  <footer>
+    <p>
+      Created By:
+      <a href="https://dainedvorak.com" target="_blank" class="text-white text-decoration-none">
+        Daine Dvorak
+      </a>
+      d.b.a. JETTLIFE Tech --
+      <span id="currentYear"></span>
+    </p>
+  </footer>
+  <!-- ========== End Footer ========== -->
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- Script to handle theme switching and carousel data -->
+  <script>
+    // Dynamically set the footer year
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    // all certifications data
+    const certifications = [
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/chatgpts-operator-automating-everyday-tasks-with-ai-agents.jpg",
+        CertificateName: "ChatGPT's Operator: Automating Everyday Tasks with AI Agents",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Google Analytics</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/f280c40c107c01bf12709320290250c9296b798e32743c2009a1109aa0e1d7b3?trk=share_certificate",
+        CertOrg: "LinkedIn Learning",
+        CertIssued: "3/26/2025"
+      },
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/chatgpts-operator-automating-everyday-tasks-with-ai-agents.jpg",
+        CertificateName: "ChatGPT's Operator: Automating Everyday Tasks with AI Agents",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Google Analytics</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/f280c40c107c01bf12709320290250c9296b798e32743c2009a1109aa0e1d7b3?trk=share_certificate",
+        CertOrg: "LinkedIn Learning",
+        CertIssued: "3/26/2025"
+      },
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/creating-gpt-with-action.jpg",
+        CertificateName: "Creating GPTs with Actions",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>ChatGPT</span><span class='badge bg-success p-1 m-2'>Chatbot Development</span><span class='badge bg-success p-1 m-2'>Custom API Building</span><span class='badge bg-success p-1 m-2'>Custom GPT Building</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/014b2734e56a0e32d9ba11d4d2a70d6e2e0d93c1350682ca8d3c6d759a17bd21?trk=share_certificate",
+        CertOrg: "LinkedIn",
+        CertIssued: "2/1/2025"
+      },
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/learning-rest-api.jpg",
+        CertificateName: "Learning REST APIs",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>REST APIs</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/cbd521d0049f22cc5728ef30c2d2973a71b3ead6699577889cd7a8ceec259af1?trk=share_certificate",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2025"
+      },
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/creating-api-documentation.jpg",
+        CertificateName: "Creating API Documentation",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>API Documentation</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/547d018ea8c3f8e41570a680ecea65110ed1cc02c4812169c5b28a9ec199137f?trk=share_certificate",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2025"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/google-tag-manager-fundamentals-certification.jpg",
+        CertificateName: "Google Tag Manager Fundamentals",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Google Tag Manager</span>",
+        CertLink: "#",
+        CertOrg: "Google Analytics Academy",
+        CertIssued: "2/1/2024"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/node-js-course-certification.png",
+        CertificateName: "Certificate of Excellence Nodejs Fundamentals",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>NodeJS</span><span class='badge bg-success p-1 m-2'>JavaScript</span><span class='badge bg-success p-1 m-2'>jQuery</span>",
+        CertLink: "#",
+        CertOrg: "Google Developers Launchpad",
+        CertIssued: "1/1/2024"
+      },
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/career-essentials-in-generative-al-by-microsoft-and-linkedin.jpg",
+        CertificateName: "Career Essentials in Generative AI by Microsoft and LinkedIn",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Generative AI</span><span class='badge bg-success p-1 m-2'>Computer Ethics</span><span class='badge bg-success p-1 m-2'>Artificial Intelligence (AI)</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/d3fc695b0770c2f0b1f31d117e8f869e4f5cc7d501d3a8ff045e86ef05803c24?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BRxWB8lMWQJ62oU78UM8WYA%3D%3D",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2024"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/what-is-generative-ai.png",
+        CertificateName: "What Is Generative AI?",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Generative AI</span><span class='badge bg-success p-1 m-2'>Artificial Intelligence (AI)</span><span class='badge bg-success p-1 m-2'>Generative AI Tools</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/e3d422c4c3392700df85831b198c73fa7f62c87c37bd193d5b475329984fdea2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BLS5jAOqNSBS7JdWLttznug%3D%3D",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2024"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/introduction-to-artificial-intelligence.jpg",
+        CertificateName: "Introduction to Artificial Intelligence",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Artificial Intelligence for Business</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/b786c639794d174f14980b796f1c9d361873eddbe7e7b62b19f910cd16ed5657?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BW4fIDOQ7TGWM1d%2F2qKQ8Rg%3D%3D",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2024"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/generative-ai_-the-evolution-of-thoughtful-online-search.jpg",
+        CertificateName: "Generative AI - The Evolution of Thoughtful Online Search",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Generative AI</span><span class='badge bg-success p-1 m-2'>Artificial Intelligence for Business</span><span class='badge bg-success p-1 m-2'>Search Engine Technology</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/7c24da38d1c6138e8e7498ad79435298dc636ef44701b1234768c2fcd460ba06?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BRxWB8lMWQJ62oU78UM8WYA%3D%3D",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2024"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/prompt-engineering-on-deeplearning_ai.jpg",
+        CertificateName: "Prompt Engineering on DeepLearning.AI",
+        CertBadges: "<span class='badge  bg-success p-1 m-2'>Prompt design</span><span class='badge bbg-success p-1 m-2'>Few-shot and zero-shot prompting</span><span class='badge bbg-success p-1 m-2'>Chain-of-thought prompting</span><span class='badge bbg-success p-1 m-2'>LLM output evaluation</span><span class='badge bbg-success p-1 m-2'>Task-specific prompt engineering</span>",
+        CertLink: "https://example.com/cert1",
+        CertOrg: "DeepLearning.AI & OpenAI",
+        CertIssued: "4/1/2024"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/introduction-to-large-language-models.jpg",
+        CertificateName: "Introduction to Large Language Models",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Large Language Models (LLM)</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/00d9c78ea12daae54c02bdffc6551f06eb12d1681e0fced140ba82781bfc941a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BLS5jAOqNSBS7JdWLttznug%3D%3D",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2024"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/learning-microsoft-365-copilot.jpg",
+        CertificateName: "Learning Microsoft 365 Copilot",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Microsoft Copilot</span><span class='badge bg-success p-1 m-2'>Microsoft 365</span><span class='badge bg-success p-1 m-2'>Artificial Intelligence for Business</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/ec331597139bddc996f69a234927cbb743f99a4920b37f97b48dfa789f9182a3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BLS5jAOqNSBS7JdWLttznug%3D%3D",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2024"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/ethics-in-the-age-of-generative-ai.jpg",
+        CertificateName: "Ethics in the Age of Generative AI",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Responsible AI</span><span class='badge bg-success p-1 m-2'>Generative AI</span><span class='badge bg-success p-1 m-2'>Computer Ethics</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/51091c855589224ed5accf9b62277f586a01943c8c15f61909bb9c4dd1b7f174?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BRxWB8lMWQJ62oU78UM8WYA%3D%3D",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2024"
+      },
+
+ 
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/github-certification.jpg",
+        CertificateName: "GitHub Certification",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Git CLI</span>",
+        CertLink: "#",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2024"
+      },
+
+      {
+        CertImage: "https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/img/daine-dvorak-certifications/becoming-more-memorable-and-persuasive.jpg",
+        CertificateName: "Becoming More Memorable and Persuasive",
+        CertBadges: "<span class='badge bg-success p-1 m-2'>Personal Branding</span>",
+        CertLink: "https://www.linkedin.com/learning/certificates/72d31d839d81f1a04fbf31788958309de9f09662a2c6e60a58744492f5795c2a?trk=share_certificate",
+        CertOrg: "LinkedIn Learning Certificate",
+        CertIssued: "3/1/2024"
+      }
+    ];
+
+    // Create responsive multi-item carousel
+    function populateCarousel() {
+      const carouselInner = document.getElementById("certCarouselInner");
+      const carouselIndicators = document.getElementById("certCarouselIndicators");
+      const totalCerts = certifications.length;
+      
+      // Clear any existing content
+      carouselInner.innerHTML = '';
+      carouselIndicators.innerHTML = '';
+      
+      // Calculate how many cards to show per slide based on screen width
+      let cardsPerView = 3; // Default for desktop
+      if (window.innerWidth < 768) {
+        cardsPerView = 1; // Mobile
+      } else if (window.innerWidth < 992) {
+        cardsPerView = 2; // Tablet
+      }
+      
+      // Create individual slide for each certificate to enable single card sliding
+      certifications.forEach((cert, index) => {
+        // Create indicator button (one per certificate)
+        const indicator = document.createElement('button');
+        indicator.type = 'button';
+        indicator.setAttribute('data-bs-target', '#certCarousel');
+        indicator.setAttribute('data-bs-slide-to', index);
+        indicator.setAttribute('aria-label', `Certificate ${index + 1}`);
+        
+        if (index === 0) {
+          indicator.classList.add('active');
+          indicator.setAttribute('aria-current', 'true');
+        }
+        
+        carouselIndicators.appendChild(indicator);
+        
+        // Create a slide for each certificate
+        const slide = document.createElement('div');
+        slide.className = `carousel-item${index === 0 ? ' active' : ''}`;
+        
+        // Create a flex container for this slide
+        const slideContainer = document.createElement('div');
+        slideContainer.className = 'd-flex justify-content-center';
+        
+        // Add current cert and "peek" at next certificates
+        for (let i = 0; i < cardsPerView; i++) {
+          const certIndex = (index + i) % totalCerts;
+          const certificate = certifications[certIndex];
+          
+          // Create cert card container
+          const cardContainer = document.createElement('div');
+          cardContainer.className = 'cert-card-container';
+          
+          // Create the actual card
+          const card = document.createElement('div');
+          card.className = 'card cert-card bg-white rounded shadow h-100';
+          card.dataset.index = certIndex;
+          card.addEventListener('click', () => showCertModal(certIndex));
+          
+          card.innerHTML = `
+            <div class="card-body p-3">
+              <div class="text-center">
+                <img 
+                  src="${certificate.CertImage || '#'}" 
+                  alt="${certificate.CertificateName || ''}" 
+                  class="img-fluid rounded mb-2 cert-image" 
+                />
+                <h6 class="card-title text-dark mt-2">${certificate.CertificateName || ''}</h6>
+                <div class="mb-2 cert-badges">${certificate.CertBadges || ''}</div>
+                <div class="small text-muted mb-2">
+                  <div><strong>${certificate.CertOrg || 'N/A'}</strong></div>
+                  <div>Issued: ${certificate.CertIssued || 'N/A'}</div>
+                </div>
+              </div>
+            </div>
+          `;
+          
+          cardContainer.appendChild(card);
+          slideContainer.appendChild(cardContainer);
+        }
+        
+        slide.appendChild(slideContainer);
+        carouselInner.appendChild(slide);
+      });
+      
+      // Initialize the carousel with custom settings
+      const carouselEl = document.getElementById('certCarousel');
+      if (carouselEl) {
+        const carousel = new bootstrap.Carousel(carouselEl, {
+          interval: 5000, // Auto slide every 5 seconds
+          ride: 'carousel', // Enable auto-sliding
+          wrap: true,     // Circular carousel (loop back to beginning)
+          touch: true     // Allow touch/swipe navigation
+        });
+      }
+    }
+
+    // Show certificate modal
+    function showCertModal(index) {
+      const cert = certifications[index];
+      const modal = document.getElementById('certModal');
+      const modalInstance = bootstrap.Modal.getOrCreateInstance(modal);
+      
+      // Set modal content
+      document.getElementById('modalImage').src = cert.CertImage || '#';
+      document.getElementById('modalTitle').textContent = cert.CertificateName || '';
+      document.getElementById('modalBadges').innerHTML = cert.CertBadges || '';
+      document.getElementById('modalOrg').innerHTML = `<strong>Certification Organization:</strong> ${cert.CertOrg || 'N/A'}`;
+      document.getElementById('modalDate').innerHTML = `<strong>Date Certificate Issued:</strong> ${cert.CertIssued || 'N/A'}`;
+      document.getElementById('modalLink').href = cert.CertLink || '#';
+      document.getElementById('certModalLabel').textContent = cert.CertificateName || 'Certificate';
+      
+      // Show modal
+      modalInstance.show();
+    }
+    
+    // Call populateCarousel on page load and window resize
+    window.addEventListener('resize', populateCarousel);
+    document.addEventListener('DOMContentLoaded', populateCarousel);
+
+    // Theme switching
+    const themeOptions = document.querySelectorAll(".theme-option");
+    themeOptions.forEach((option) => {
+      option.addEventListener("click", function (e) {
+        e.preventDefault();
+        // Remove previous theme classes
+        document.body.classList.remove(
+          "galaxy-theme",
+          "cosmos-theme",
+          "universe-theme",
+          "spaceman-theme",
+          "nebula-theme",
+          "rocketships-theme",
+          "usflag-theme"
+        );
+        // Add the new one
+        const newTheme = this.getAttribute("data-theme");
+        document.body.classList.add(newTheme);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -26,6 +26,107 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+  :root {
+	--color-dark: #ffffff;
+	--color-primary: #00a2ff;
+	accent-color: var(--color-primary);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+img {
+	display: block;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+h1 {
+	margin-block-end: 1rem;
+	font-size: 3rem;
+}
+
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+}
+
+.wrapper {
+	display: grid;
+	place-content: center;
+	height: 10%;
+}
+
+.c-btn {
+	position: relative;
+	overflow: hidden;
+	padding: 0.85rem 2rem;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	color: var(--color-primary);
+	text-decoration: none;
+
+	border-radius: 8px;
+	background-color: transparent;
+	backface-visibility: hidden;
+	box-shadow: inset 0 0 0 1px var(--color-primary);
+
+	transform: translateZ(0);
+
+	&::after {
+		content: "";
+		pointer-events: none;
+		position: absolute;
+
+		top: 0;
+		left: 0;
+		z-index: 1;
+		height: 120%;
+		width: 120%;
+
+		border-radius: 20%;
+		background-color: var(--color-primary);
+		scale: 0 0;
+		translate: 0 140%;
+		transition: scale 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
+			translate 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+}
+
+.c-btn__label {
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+
+	z-index: 2;
+	font-size: 1.2rem;
+	letter-spacing: 0.025em;
+
+	transition: color 0.32s ease-in-out;
+}
+
+.c-btn:hover {
+	span {
+		color: var(--color-dark);
+	}
+
+	&:after {
+		scale: 1.5 1.5;
+		translate: 0 0;
+
+		border-radius: 50%;
+	}
+}
+
+  </style>
 
   <!-- =======================================================
   * Template Name: Daine Dvorak Portfolio v2
@@ -201,7 +302,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Skills</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Driving Search Visibility & Workflow Efficiency with AI-Powered SEO Solutions        </p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -218,7 +319,7 @@
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>AI & Automation for Digital Marketing</span> <i class="val">95%</i></span>
+              <span class="skill"><span>Certified Prompt Engieering + AI Agent Developer for Deliverable Automation</span> <i class="val">95%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -250,9 +351,9 @@
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Full Stack (LAMP, MEAN, MERN, MEVN) Advanced Developer</span> <i class="val">55%</i></span>
+              <span class="skill"><span>Full Stack (LAMP, MEAN, MERN, MEVN) Advanced Developer</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
 
@@ -278,29 +379,31 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Clients</p>
+              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Enhanced organic rankings consistently by ~150% in about 9-12 months.</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <span data-purecounter-start="0" data-purecounter-end="114" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Custom SEO Automation Tools</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+              <!--<span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>-->
+              <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" style="display: inline;"></span>
+              
+              <br><p class="mt-4">SEO Deliverable Standard Operating Procedures Developed</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Workers</p>
+              <span data-purecounter-start="0" data-purecounter-end="400" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Increased SEO-driven revenues by an average of 400%</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -341,15 +444,15 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <img src="assets/img/testimonials/erin-shout-out-for-daine-dvorak-skills.jpg" class="testimonial-img" alt="Erin R. Minné profile picture from a Testimonial for Daine Dvorak work achievements">
+                <h3>Erin R. Minné</h3>
+                <h4>Erin R. worked with Daine on the same team</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                  <span>Daine was on the same digital team as me at Woodruff, specializing in SEO. He was also an expert in all things AI automation and transformation. Daine was often a great resource when I had questions regarding ChatGPT extensions, ChatGPT best practices, or Excel formulas. He was always willing to support his greater team and solve complex problems. Daine was on the same digital team as me at Woodruff, specializing in SEO. He was also an expert in all things AI automation and transformation. Daine was often a great resource when I had questions regarding ChatGPT extensions, ChatGPT best practices, or Excel formulas. He was always willing to support his greater team and solve complex problems.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -357,15 +460,34 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <img src="assets/img/testimonials/andee-shout-out-for-daine-dvorak-skills.jpg" class="testimonial-img" alt="">
+                <h3>Andee LaMonica</h3>
+                <h4>Associate Creative Director at Intouch Solutions (Eversana Intouch)</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <span>
+                    <span class="visible-content-andee">As a writer, I cannot speak highly enough of the partnership Daine and I created while working together. Not only is he collaborative with team members and across departments, but he is dedicated to overall success for his brands and his passion for great work is infectious. It was truly a delight to work with him and one of the reasons I know how important it...</span>
+                    <span class="hidden-content-andee" style="display: none;"> is for copy and SEO teams to work in parallel--I've seen the results and the potential for even more efficiencies. He made my work more enjoyable because I knew it would only be elevated with Daine's efforts. I wish I could clone him, and would love to work with him again.</span>
+                    <a href="#" class="read-more-andee" onclick="toggleContentAndee(this); return false;">Read More</a>
+                  </span>
+                  
+                  <script>
+                    function toggleContentAndee(button) {
+                      const parentSpan = button.parentNode;
+                      const hiddenContent = parentSpan.querySelector('.hidden-content-andee');
+                      
+                      if (hiddenContent.style.display === 'none') {
+                        hiddenContent.style.display = 'inline';
+                        button.textContent = 'Read Less';
+                      } else {
+                        hiddenContent.style.display = 'none';
+                        button.textContent = 'Read More';
+                      }
+                    }
+                  </script>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -373,15 +495,36 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <img src="assets/img/testimonials/josiphene-shout-out-for-daine-dvorak-skills.jpg" class="testimonial-img" alt="">
+                <h3>Josiphene Black</h3>
+                <h4>SEO Group Director</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <span>
+                    <span class="visible-content-josiphene">Daine is a unique and great asset to have on any team. His mind is the perfect combination of technical knowledge, strategic thinking, and quick execution which lead to him solving problems for his own clients and for the entire SEO team at Intouch. In addition to managing his set of clients, overseeing their SEO strategy, reporting and execution of tasks, Daine consistently added value...</span>
+                    <span class="hidden-content-josiphene" style="display: none;">to the overarching company by solving team-wide issues which lead to increased productivity and efficiencies for everyone. Examples of these issues include data-entry or manual execution of certain tasks- Daine thrives at finding new ways to automate these manual and tedious items which frees up people to do more meaningful work. 
+                  
+                    Daine was also an excellent team player, always willing to share his knowledge, lead a training, or offer tech support help to others at the company. This also lead to him being very collaborative, working across multiple internal disciplines to realize his goals and strategic ideas. If you get the opportunity to work with Daine, you will see the impacts he has very quickly.</span>
+                    <a href="#" class="read-more-josiphene" onclick="toggleContentJosiphene(this); return false;">Read More</a>
+                  </span>
+                  
+                  <script>
+                    function toggleContentJosiphene(button) {
+                      const parentSpan = button.parentNode;
+                      const hiddenContent = parentSpan.querySelector('.hidden-content-josiphene');
+                      
+                      if (hiddenContent.style.display === 'none') {
+                        hiddenContent.style.display = 'inline';
+                        button.textContent = 'Read Less';
+                      } else {
+                        hiddenContent.style.display = 'none';
+                        button.textContent = 'Read More';
+                      }
+                    }
+                  </script>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -389,15 +532,38 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <img src="assets/img/testimonials/jesse-shout-out-for-daine-dvorak-skills.jpg" class="testimonial-img" alt="">
+                <h3>Jesse Brown</h3>
+                <h4>SEO Director</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <span>
+                    <span class="visible-content">Daine is a unique talent with comprehensive industry knowledge he's able to tactilely apply for and articulate to clients. While working with Daine he developed several internal tools and processes streamlining our department's workflow. His passion for SEO and UX/UI comes out in his ability to communicate their strategic applications for websites and digital products...</span>
+                    <span class="hidden-content" style="display: none;">Over the years I've learned more than I can honestly remember from Daine and am thankful he has been so giving of his time and expertise. 
+                  
+                                      As a leader, Daine was a teacher to those throughout our organization. He freely shared his strategic ideas and insights, giving him the ability to delegate complex efforts to internal team members and partnering SMEs. He was also able to consistently deliver top-quality results with ever-changing client expectations, needs, and deadlines.
+                                      
+                                      If you have the privilege of working with Daine you'll learn not only the comprehensive knowledge he possesses throughout the industry but quickly learn it for yourself. Having Daine on your team brings an incredibly talented individual on board, who will continually strive to make himself and those around him better.</span>
+                    <a href="#" class="read-more" onclick="toggleContent(this); return false;">Read More</a>
+                  </span>
+                  
+                  <script>
+                    function toggleContent(button) {
+                      const parentSpan = button.parentNode;
+                      const hiddenContent = parentSpan.querySelector('.hidden-content');
+                      
+                      if (hiddenContent.style.display === 'none') {
+                        hiddenContent.style.display = 'inline';
+                        button.textContent = 'Read Less';
+                      } else {
+                        hiddenContent.style.display = 'none';
+                        button.textContent = 'Read More';
+                      }
+                    }
+                  </script>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -405,15 +571,15 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <img src="assets/img/testimonials/patrick-shout-out-for-daine-dvorak-skills.jpg" class="testimonial-img" alt="">
+                <h3>Patrick R. Head II</h3>
+                <h4>Patrick R. managed Daine directly</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <span>I highly recommend Daine Dvorak for any type of technical position. He took my office to the most sophisticated levels of efficiency in the most cost effective way, paying attention to detail on what and how our business worked. He took on the tasks asked, as well as recommended new and innovative ways to make it easier for the entire staff to do their jobs, in turn freeing up time to expand the business. </span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -426,7 +592,24 @@
       </div>
 
     </section><!-- /Testimonials Section -->
+    <div class="p-3">
+      <div class="card mb-5 shadow bg-light border border-2 border-success">
+        <div class="card-body">
+          <h5 class="card-title">Daine Dvorak's SEO Expert, Technical SEO Master, and Process Automation
+            Specialists - Comprehensive Resume</h5>
+          <p class="card-text">This resume is Comprehensive Resume of all my skills, achievements, work
+            history, and more!</p>
 
+
+<div class="wrapper"><a href="https://dainedvorak.com/.dev-2025/Daine_Dvorak/assets/daine-dvorak-seo_manager-resume-4_15_2025.pdf" class="c-btn">
+  <span class="c-btn__label">Download Resume<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.50005 1.04999C7.74858 1.04999 7.95005 1.25146 7.95005 1.49999V8.41359L10.1819 6.18179C10.3576 6.00605 10.6425 6.00605 10.8182 6.18179C10.994 6.35753 10.994 6.64245 10.8182 6.81819L7.81825 9.81819C7.64251 9.99392 7.35759 9.99392 7.18185 9.81819L4.18185 6.81819C4.00611 6.64245 4.00611 6.35753 4.18185 6.18179C4.35759 6.00605 4.64251 6.00605 4.81825 6.18179L7.05005 8.41359V1.49999C7.05005 1.25146 7.25152 1.04999 7.50005 1.04999ZM2.5 10C2.77614 10 3 10.2239 3 10.5V12C3 12.5539 3.44565 13 3.99635 13H11.0012C11.5529 13 12 12.5528 12 12V10.5C12 10.2239 12.2239 10 12.5 10C12.7761 10 13 10.2239 13 10.5V12C13 13.1041 12.1062 14 11.0012 14H3.99635C2.89019 14 2 13.103 2 12V10.5C2 10.2239 2.22386 10 2.5 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+    </svg>
+
+</a></div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer id="footer" class="footer light-background">
