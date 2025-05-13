@@ -699,7 +699,11 @@ transform: translate(-50%,-50%);
 	padding:0;
 }
 .port_bannerbg_wrapper {
-    background: url(https://dummyimage.com/1904x952);
+    background: url('https://dainedvorak.com/.dev-2025/dev/assets/images/0-temp/banner_bg-daine-dvorak-website.png'); 
+   
+
+
+
 	background-size:cover;
 	-webkit-animation: moveup 50s linear infinite;
     -moz-animation: moveup 50s linear infinite;
@@ -712,6 +716,7 @@ transform: translate(-50%,-50%);
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+ 
 .port_banner_wrapper {
 	margin-left: 120px;
     -webkit-transition: all 0.3s;
