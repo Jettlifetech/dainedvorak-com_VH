@@ -2,9 +2,9 @@
 [Master Stylesheet] 
 Project: Portfolio Responsive HTML Template
 Version: 1.0.6
-Assigned to: ThemeForest
  ------------------------------------------------------------------- 
 [Table of contents] 
+00. Daine Dvorak Custom CSS to add from template modifications and customizations
 01. Body 
 02. Reusable Css 
 03. Sidebar Css / .port_sidebar_wrapper 
@@ -27,6 +27,13 @@ Assigned to: ThemeForest
 20. Media Query Css 
 
 --------------------------------------------------------------------*/
+/* ================== 00 Daine Dvorak Custom Styles From Template Customizations -- START ================== */
+
+
+
+
+/* ================== 00 Daine Dvorak Custom Styles From Template Customizations -- END ================== */
+
 /* ================== 01 body start ================== */
 body {
     margin: 0;
