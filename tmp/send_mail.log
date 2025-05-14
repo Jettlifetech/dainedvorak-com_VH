@@ -1,0 +1,5 @@
+2025-05-14 21:32:04 send_mail.php: Script started
+2025-05-14 21:32:04 send_mail.php: Received POST data: {"firstName":"XbdkcaPCPm","lastName":"dPisySdSgU","email":"GuNLO@mlxiU.com","subject":"TaqSJLnlrX","body":"SNIZWetySLTvVFiOQzAf"}
+2025-05-14 21:32:05 send_mail.php: Email sent successfully
+2025-05-14 21:32:05 send_mail.php: Form data saved to JSON file
+2025-05-14 21:32:05 send_mail.php: Returning response code 200

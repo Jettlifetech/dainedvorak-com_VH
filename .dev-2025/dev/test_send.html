@@ -1,0 +1,39 @@
+<!-- /var/www/dainedvorak.com/.dev-2025/dev/test_send.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Test Mail</title></head>
+<body>
+    <h3>Test Mailer "send_mail.php</h3>
+<form id="testForm">
+  <input name="first_name" value="John"><br>
+  <input name="last_name" value="Doe"><br>
+  <input name="email" value="john@example.com"><br>
+  <input name="subject" value="Test Subject"><br>
+  <textarea name="message">Test Message</textarea><br>
+  <button type="submit">Send Test</button>
+</form>
+<hr>
+<h3>Test Mailer "send-email.php</h3>
+<form id="testForm2">
+  <input name="email" value="daine@jettlifetech.com"><br>
+  <input name="subject" value="Test Subject"><br>
+  <textarea name="body">Test Message</textarea><br>
+  <input name="AltBody" value="Test Message AltBody"><br>
+  <button type="submit">Send Test</button>
+</form>
+<script>
+document.getElementById("testForm2").addEventListener("submit", function(e){
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(this));
+    fetch("send-email.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(console.log)
+    .catch(console.error);
+});
+</script>
+</body>
+</html>

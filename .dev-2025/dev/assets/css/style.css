@@ -1,4 +1,4 @@
-/*--------------------- Copyright (c) 2022 --------------------------
+/*--------------------- Copyright (c) 2025 --------------------------
 [Master Stylesheet] 
 Project: Portfolio Responsive HTML Template
 Version: 1.0.6
@@ -6,31 +6,148 @@ Version: 1.0.6
 [Table of contents] 
 00. Daine Dvorak Custom CSS to add from template modifications and customizations
 01. Body 
-02. Reusable Css 
-03. Sidebar Css / .port_sidebar_wrapper 
-04. Banner Css / .port_bannerbg_wrapper
-05. About section Css / .port_about_setions
-06. Education section Css / .port_education_setions 
-07. Progress setions Css / .port_progress_setions 
-08. Experience setions Css / .port_experience_setions 
-09. Services setions Css / .port_services_setions 
-10. Projects_Setions Css / .port_projects_setions 
-11. Testimonial setions Css / .port_testimonial_setions  
-12. Blog setions Css / .port_blog_setions 
-13. sponsor setions Css / .port_responsor_setions  
-14. map setions Css / .port_map_setions  
-15. Contact setions Css / .port_contact_wrapper  
-16. footer setions Css / .port_footer_setions 
-17. Single blog setions  Css / .port_singleblog_wrapper 
-18. Go to top  Css / .bottom_top  
-19. custom scrollbar Css
-20. Media Query Css 
+02. Reusable CSS 
+03. Sidebar CSS / .port_sidebar_wrapper 
+04. Banner CSS / .port_bannerbg_wrapper
+05. About section CSS / .port_about_setions
+06. Education section CSS / .port_education_setions 
+07. Progress setions CSS / .port_progress_setions 
+08. Experience setions CSS / .port_experience_setions 
+09. Services setions CSS / .port_services_setions 
+10. Projects_Setions CSS / .port_projects_setions 
+11. Testimonial setions CSS / .port_testimonial_setions  
+12. Blog setions CSS / .port_blog_setions 
+13. sponsor setions CSS / .port_responsor_setions  
+14. map setions CSS / .port_map_setions  
+15. Contact setions CSS / .port_contact_wrapper  
+16. footer setions CSS / .port_footer_setions 
+17. Single blog setions  CSS / .port_singleblog_wrapper 
+18. Go to top  CSS / .bottom_top  
+19. custom scrollbar CSS
+20. Media Query CSS 
 
 --------------------------------------------------------------------*/
+
 /* ================== 00 Daine Dvorak Custom Styles From Template Customizations -- START ================== */
+.grid_img {
+  position: relative;
+  overflow: hidden;
+}
 
+.grid_img .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding-bottom: 20px;
+}
 
+.grid_img:hover .overlay {
+  opacity: 1;
+}
 
+.view-details-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #dddddd;
+}
+/*-- WEBSITE Carousel of CERTIFICATIONS --*/
+
+ body2 {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    .swiper {
+      width: 100%;
+      padding: 60px 0;
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 20px;
+      max-width: 350px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .title {
+      margin: 15px 0 5px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      background: #00bcd4;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 0.75em;
+    }
+    .details {
+      font-size: 0.85em;
+      color: #ccc;
+    }
+    .cert-btn {
+      display: inline-block;
+      margin: 10px 0 8px;
+      padding: 8px 18px;
+      background: #07d400;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+      
+      cursor: pointer;
+    }
+    .cert-btn:hover {
+      background: #011af7;
+      shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    /*<!-- END WEBSITE Carousel - of CERTIFICATIONS -->*/
+
+    html {
+  scroll-behavior: smooth;
+        }
 
 /* ================== 00 Daine Dvorak Custom Styles From Template Customizations -- END ================== */
 
@@ -3127,7 +3244,7 @@ h2.project_heading:after {
     font-size: 25px;
 }
 .bannner_leftpart h2.stranger:after {
-    width: 195px;
+    width: 295px;
 }
 .bannner_leftpart .banner_name {
     font-size: 55px;
