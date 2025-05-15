@@ -30,11 +30,4 @@ Disallow:
 User-agent: yahoo-blogs/v3.9
 Disallow: 
 User-agent: *
-Disallow: 
-Disallow: /edu-center/
-Disallow: /.archive/
-Disallow: /.development_area/
-Disallow: /.vscode/
-Disallow: /resume-links-page/
-Disallow: /z_dev/
 Sitemap: https://dainedvorak.com/sitemap.xml

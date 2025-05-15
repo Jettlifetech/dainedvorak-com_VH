@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none';">
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Daine Dvorak Website Revamp - Going Live Soon!</title>
+  <meta name="description" content="Hire Daine Dvorak: SEO Manager with AI expertise, a record of ranking success, and a data-driven approach to search and content optimization.">
+  <meta name="keywords" content="Daine Dvorak, SEO Manager, AI, Search Engine Optimization, Content Optimization, Data-Driven">
+  <meta name="author" content="Daine Dvorak">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5YXDWMZEV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R5YXDWMZEV');
+  </script>
+
+  <!-- Favicon Links -->
+  <link rel="icon" type="image/png" href="/.dev-2025/dev/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/.dev-2025/dev/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/.dev-2025/dev/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/.dev-2025/dev/assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Daine Dvorak Portfolio" />
+  <link rel="manifest" href="/.dev-2025/dev/assets/favicon/site.webmanifest" />
+
+  <!-- Minified CSS -->
+  <style>
+    *{font-family:'montserrat',sans-serif}body{margin:0;padding:0}.page{background:#f1f1f1;display:flex;flex-wrap:wrap}.col{flex:1;height:100vh;position:relative}.countdown-col::before{content:"";position:absolute;width:100%;height:100%;background:url(coming-soon-bg-with-black-overlay-75p.jpg) no-repeat center center;background-size:cover;filter:brightness(0.3);z-index:0}.countdown-col{position:relative;overflow:hidden}.time{color:#fff;text-transform:uppercase;width:90%;display:flex;justify-content:center;position:relative;z-index:1}.middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:1}.time span{padding:0 14px;font-size:10px}.time span div{font-size:40px}.newslatter{width:90%}.newslatter h4{font-style:italic;font-size:12px}.newslatter input,.newslatter button{display:block;margin:12px auto;width:100%;max-width:400px;box-sizing:border-box;padding:14px 20px;border-radius:30px;border:1px solid #ddd;outline:none}.newslatter-button{background:linear-gradient(125deg,#3498db,#34495e);color:#fff;cursor:pointer;transition:.4s}.newslatter-button:hover{opacity:.7}@media screen and (max-width:900px){.col{flex:100%}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="countdown-col col">
+    <div>
+      <h2 class="time middle"><br><br><br>Website Update Going Live Soon!</h2>
+    </div>
+    <div class="time middle">
+      <span><div id="days">12</div> Days</span>
+      <span><div id="hours">06</div> Hours</span>
+      <span><div id="minutes">35</div> Minutes</span>
+      <span><div id="seconds">54</div> Seconds</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  let comingDate = new Date('May 16, 2025 23:59:00')
+  let d = document.getElementById('days')
+  let h = document.getElementById('hours')
+  let m = document.getElementById('minutes')
+  let s = document.getElementById('seconds')
+
+  let x = setInterval(function() {
+    let now = new Date()
+    let selisih = comingDate.getTime() - now.getTime()
+    let days = Math.floor(selisih / (1000 * 60 * 60 * 24))
+    let hours = Math.floor(selisih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    let minutes = Math.floor(selisih % (1000 * 60 * 60) / (1000 * 60))
+    let seconds = Math.floor(selisih % (1000 * 60) / 1000)
+
+    d.innerHTML = getTrueNumber(days)
+    h.innerHTML = getTrueNumber(hours)
+    m.innerHTML = getTrueNumber(minutes)
+    s.innerHTML = getTrueNumber(seconds)
+
+    if (selisih < 0) {
+      clearInterval(x)
+      d.innerHTML = '00'
+      h.innerHTML = '00'
+      m.innerHTML = '00'
+      s.innerHTML = '00'
+    }
+  }, 1000)
+
+  function getTrueNumber(x) {
+    return x < 10 ? '0' + x : x
+  }
+</script>
+</body>
+</html>
