@@ -1,0 +1,118 @@
+2025-05-15 00:51:34 send_mail.php: Script started
+2025-05-15 00:51:34 send_mail.php: Received POST data: []
+2025-05-15 00:51:36 send_mail.php: Email sent successfully
+2025-05-15 00:51:36 PHP ERROR [2] Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 82
+[15-May-2025 00:51:36 UTC] PHP Warning:  Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 82
+2025-05-15 00:51:36 PHP ERROR [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 83
+[15-May-2025 00:51:36 UTC] PHP Warning:  Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 83
+2025-05-15 00:51:36 PHP ERROR [2] Undefined array key "email" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 84
+[15-May-2025 00:51:36 UTC] PHP Warning:  Undefined array key "email" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 84
+2025-05-15 00:51:36 PHP ERROR [2] Undefined array key "subject" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 85
+[15-May-2025 00:51:36 UTC] PHP Warning:  Undefined array key "subject" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 85
+2025-05-15 00:51:36 PHP ERROR [2] Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 86
+[15-May-2025 00:51:36 UTC] PHP Warning:  Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 86
+2025-05-15 00:51:36 send_mail.php: Form data saved to JSON file
+2025-05-15 00:51:36 send_mail.php: Returning response code 200
+2025-05-15 00:51:36 FATAL ERROR: [2] Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 86
+2025-05-15 00:53:55 send_mail.php: Script started
+2025-05-15 00:53:55 send_mail.php: Received POST data: []
+2025-05-15 00:53:56 send_mail.php: Email sent successfully
+2025-05-15 00:53:56 PHP ERROR [2] Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 82
+[15-May-2025 00:53:56 UTC] PHP Warning:  Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 82
+2025-05-15 00:53:56 PHP ERROR [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 83
+[15-May-2025 00:53:56 UTC] PHP Warning:  Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 83
+2025-05-15 00:53:56 PHP ERROR [2] Undefined array key "email" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 84
+[15-May-2025 00:53:56 UTC] PHP Warning:  Undefined array key "email" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 84
+2025-05-15 00:53:56 PHP ERROR [2] Undefined array key "subject" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 85
+[15-May-2025 00:53:56 UTC] PHP Warning:  Undefined array key "subject" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 85
+2025-05-15 00:53:56 PHP ERROR [2] Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 86
+[15-May-2025 00:53:56 UTC] PHP Warning:  Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 86
+2025-05-15 00:53:56 send_mail.php: Form data saved to JSON file
+2025-05-15 00:53:56 send_mail.php: Returning response code 200
+2025-05-15 00:53:56 FATAL ERROR: [2] Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 86
+2025-05-15 00:56:24 send_mail.php: Script started
+2025-05-15 00:56:24 send_mail.php: Received POST data: []
+2025-05-15 00:56:25 send_mail.php: Email sent successfully
+2025-05-15 00:56:25 PHP ERROR [2] Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 82
+[15-May-2025 00:56:25 UTC] PHP Warning:  Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 82
+2025-05-15 00:56:25 PHP ERROR [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 83
+[15-May-2025 00:56:25 UTC] PHP Warning:  Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 83
+2025-05-15 00:56:25 PHP ERROR [2] Undefined array key "email" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 84
+[15-May-2025 00:56:25 UTC] PHP Warning:  Undefined array key "email" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 84
+2025-05-15 00:56:25 PHP ERROR [2] Undefined array key "subject" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 85
+[15-May-2025 00:56:25 UTC] PHP Warning:  Undefined array key "subject" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 85
+2025-05-15 00:56:25 PHP ERROR [2] Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 86
+[15-May-2025 00:56:25 UTC] PHP Warning:  Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 86
+2025-05-15 00:56:25 send_mail.php: Form data saved to JSON file
+2025-05-15 00:56:25 send_mail.php: Returning response code 200
+2025-05-15 00:56:25 FATAL ERROR: [2] Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 86
+2025-05-15 01:00:23 send_mail.php: Script started
+2025-05-15 01:00:23 send_mail.php: Raw input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","message":"Hello, I would like to inquire about your services."}
+2025-05-15 01:00:23 send_mail.php: Parsed JSON input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","message":"Hello, I would like to inquire about your services."}
+2025-05-15 01:00:23 send_mail.php: Final data used: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","message":"Hello, I would like to inquire about your services."}
+2025-05-15 01:00:23 send_mail.php: Received POST data: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","message":"Hello, I would like to inquire about your services."}
+2025-05-15 01:00:24 send_mail.php: Email sent successfully
+2025-05-15 01:00:24 PHP ERROR [2] Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 103
+[15-May-2025 01:00:24 UTC] PHP Warning:  Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 103
+2025-05-15 01:00:24 PHP ERROR [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+[15-May-2025 01:00:24 UTC] PHP Warning:  Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+2025-05-15 01:00:24 PHP ERROR [2] Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 107
+[15-May-2025 01:00:24 UTC] PHP Warning:  Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 107
+2025-05-15 01:00:24 send_mail.php: Form data saved to JSON file
+2025-05-15 01:00:24 send_mail.php: Returning response code 200
+2025-05-15 01:00:24 FATAL ERROR: [2] Undefined array key "body" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 107
+2025-05-15 01:05:05 send_mail.php: Script started
+2025-05-15 01:05:05 send_mail.php: Raw input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:05:05 send_mail.php: Parsed JSON input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:05:05 send_mail.php: Final data used: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:05:05 send_mail.php: Received POST data: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:05:06 send_mail.php: Email sent successfully
+2025-05-15 01:05:06 PHP ERROR [2] Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 103
+[15-May-2025 01:05:06 UTC] PHP Warning:  Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 103
+2025-05-15 01:05:06 PHP ERROR [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+[15-May-2025 01:05:06 UTC] PHP Warning:  Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+2025-05-15 01:05:06 send_mail.php: Form data saved to JSON file
+2025-05-15 01:05:06 send_mail.php: Returning response code 200
+2025-05-15 01:05:06 FATAL ERROR: [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+2025-05-15 01:23:27 send_mail.php: Script started
+2025-05-15 01:23:27 send_mail.php: Raw input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:23:27 send_mail.php: Parsed JSON input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:23:27 send_mail.php: Final data used: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:23:27 send_mail.php: Received POST data: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:23:28 send_mail.php: Email sent successfully
+2025-05-15 01:23:28 PHP ERROR [2] Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 103
+[15-May-2025 01:23:28 UTC] PHP Warning:  Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 103
+2025-05-15 01:23:28 PHP ERROR [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+[15-May-2025 01:23:28 UTC] PHP Warning:  Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+2025-05-15 01:23:28 send_mail.php: Form data saved to JSON file
+2025-05-15 01:23:28 send_mail.php: Returning response code 200
+2025-05-15 01:23:28 FATAL ERROR: [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+2025-05-15 01:23:37 send_mail.php: Script started
+2025-05-15 01:23:37 send_mail.php: Raw input: {"first_name":"","last_name":"","email":"","subject":"","body":""}
+2025-05-15 01:23:37 send_mail.php: Parsed JSON input: {"first_name":"","last_name":"","email":"","subject":"","body":""}
+2025-05-15 01:23:37 send_mail.php: Final data used: {"first_name":"","last_name":"","email":"","subject":"","body":""}
+2025-05-15 01:23:37 send_mail.php: Received POST data: {"first_name":"","last_name":"","email":"","subject":"","body":""}
+2025-05-15 01:23:39 send_mail.php: Email sent successfully
+2025-05-15 01:23:39 PHP ERROR [2] Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 103
+[15-May-2025 01:23:39 UTC] PHP Warning:  Undefined array key "firstName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 103
+2025-05-15 01:23:39 PHP ERROR [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+[15-May-2025 01:23:39 UTC] PHP Warning:  Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+2025-05-15 01:23:39 send_mail.php: Form data saved to JSON file
+2025-05-15 01:23:39 send_mail.php: Returning response code 200
+2025-05-15 01:23:39 FATAL ERROR: [2] Undefined array key "lastName" in /var/www/dainedvorak.com/.dev-2025/dev/send_mail.php on line 104
+2025-05-15 01:25:17 send_mail.php: Script started
+2025-05-15 01:25:17 send_mail.php: Raw input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry3","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:25:17 send_mail.php: Parsed JSON input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry3","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:25:17 send_mail.php: Final data used: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry3","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:25:17 send_mail.php: Received POST data: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry3","body":"Hello, I would like to inquire about your services."}
+2025-05-15 01:25:18 send_mail.php: Email sent successfully
+2025-05-15 01:25:18 send_mail.php: Form data saved to JSON file
+2025-05-15 01:25:18 send_mail.php: Returning response code 200
+2025-05-15 02:52:28 send_mail.php: Script started
+2025-05-15 02:52:28 send_mail.php: Raw input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry4","body":"Hello, I would like to inquire about your services."}
+2025-05-15 02:52:28 send_mail.php: Parsed JSON input: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry4","body":"Hello, I would like to inquire about your services."}
+2025-05-15 02:52:28 send_mail.php: Final data used: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry4","body":"Hello, I would like to inquire about your services."}
+2025-05-15 02:52:28 send_mail.php: Received POST data: {"first_name":"daine","last_name":"Dvorak","email":"daine@Jettlifetech.com","subject":"Website Inquiry4","body":"Hello, I would like to inquire about your services."}
+2025-05-15 02:52:30 send_mail.php: Email sent successfully
+2025-05-15 02:52:30 send_mail.php: Form data saved to JSON file
+2025-05-15 02:52:30 send_mail.php: Returning response code 200
