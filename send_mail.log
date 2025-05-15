@@ -1,0 +1,10 @@
+[2025-05-15 19:12:30] Email process started
+[2025-05-15 19:12:30] Form data received: {"first_name":"daine","last_name":"dvorak","email":"daine@jettlifetech.com","subject":"Website Inquiry5-15","message":"Hello, I would like to inquire about your services."}
+[2025-05-15 19:12:30] Configuring SMTP connection
+[2025-05-15 19:12:30] Setting email content
+[2025-05-15 19:12:30] Attempting to send email from daine@jettlifetech.com with subject 'Website Inquiry5-15'
+[2025-05-15 19:12:31] Email sent successfully
+[2025-05-15 19:12:31] Saving submission to form_submissions.json
+[2025-05-15 19:12:31] Submission saved successfully
+[2025-05-15 19:12:31] Success response returned to client
+[2025-05-15 19:12:31] Email process completed
