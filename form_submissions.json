@@ -19,5 +19,19 @@
         "email": "asdasd@gmail.com",
         "subject": "Website Inquiryasdasd",
         "message": "Hello, I would like to inquire about your services.asda"
+    },
+    {
+        "first_name": "daine",
+        "last_name": "dvorak",
+        "email": "daine@jettlifetech.com",
+        "subject": "Website Inquiry",
+        "message": "Hello, I would like to inquire about your services."
+    },
+    {
+        "first_name": "Daine",
+        "last_name": "Dvorak",
+        "email": "dainedvorak@gmail.com",
+        "subject": "Website Inquiry",
+        "message": "Hello, I would like to inquire about your services."
     }
 ]
