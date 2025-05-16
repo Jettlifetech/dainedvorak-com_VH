@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Testimonial Slider</title>
+  <link rel="stylesheet" href="./style.css">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button,
+input,
+select {
+	font-family: inherit;
+	font-size: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 12px;
+}
+
+body {
+	color: #000;
+	font-family: "Shippori Antique", sans-serif;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.content-wrapper {
+	height: 100%;
+	width: 70%;
+	max-width: 100rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5rem;
+}
+
+h1 {
+	margin-bottom: calc(0.7rem + 0.5vmin);
+	font-size: calc(2.3rem + 1vmin);
+}
+
+.blue-line {
+	height: 0.3rem;
+	width: 6rem;
+	background-color: rgb(79, 143, 226);
+	margin-bottom: calc(3rem + 2vmin);
+}
+
+.wrapper-for-arrows {
+	position: relative;
+	width: 70%;
+	border-radius: 2rem;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	overflow: hidden;
+	display: grid;
+	place-items: center;
+}
+
+.review-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: calc(2rem + 1vmin);
+	width: 100%;
+}
+
+#imgDiv {
+	border-radius: 50%;
+	width: calc(6rem + 4vmin);
+	height: calc(6rem + 4vmin);
+	position: relative;
+	box-shadow: 5px -3px rgb(79, 143, 226);
+	background-size: cover;
+	margin-bottom: calc(0.7rem + 0.5vmin);
+}
+
+.chicken {
+	background-image: url("https://media0.giphy.com/media/A8Cdznswn5vnG/200w.gif?cid=790b7611e8c5980ee7141bc18ec12c49962b871eb404ba5b&rid=200w.gif&ct=s");
+	width: 200px;
+	height: 250px;
+	position: absolute;
+	top: 12%;
+}
+
+#imgDiv::after {
+	content: "''";
+	font-size: calc(2rem + 2vmin);
+	font-family: sans-serif;
+	line-height: 150%;
+	color: #fff;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	background-color: rgb(79, 143, 226);
+	position: absolute;
+	top: 10%;
+	left: -10%;
+	width: calc(2rem + 2vmin);
+	height: calc(2rem + 2vmin);
+}
+
+#personName {
+	margin-bottom: calc(0.7rem + 0.5vmin);
+	font-size: calc(1rem + 0.5vmin);
+	letter-spacing: calc(0.1rem + 0.1vmin);
+	font-weight: bold;
+}
+
+#profession {
+	font-size: calc(0.8rem + 0.3vmin);
+	margin-bottom: calc(0.7rem + 0.5vmin);
+	color: rgb(79, 143, 226);
+}
+
+#description {
+	font-size: calc(0.8rem + 0.3vmin);
+	width: 70%;
+	max-width: 40rem;
+	text-align: center;
+	margin-bottom: calc(1.4rem + 1vmin);
+	color: rgb(92, 92, 92);
+	line-height: 2rem;
+}
+
+.arrow-wrap {
+	position: absolute;
+	top: 50%;
+}
+
+.arrow {
+	width: calc(1.4rem + 0.6vmin);
+	height: calc(1.4rem + 0.6vmin);
+	border: solid rgb(79, 143, 226);
+	border-width: 0 calc(0.5rem + 0.2vmin) calc(0.5rem + 0.2vmin) 0;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.arrow:hover {
+	transition: 0.3s;
+	transform: scale(1.15);
+}
+
+.left-arrow-wrap {
+	left: 5%;
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+.right-arrow-wrap {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	right: 5%;
+}
+
+
+.move-head {
+	animation: moveHead 1.55s infinite;
+	animation-delay: -0.8s;
+}
+
+@keyframes moveHead {
+	0% {
+	}
+	25% {
+		transform: translate(0.5rem, 1rem) rotate(5deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(-5deg);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.content-wrapper {
+		width: 100%;
+	}
+}
+
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Testimonial Slider</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="content-wrapper">
+		<h1>Our Reviews</h1>
+		<div class="blue-line"></div>
+		<div class="wrapper-for-arrows">
+			<div style="opacity: 0;" class="chicken"></div>
+			<div id="reviewWrap" class="review-wrap">
+				<div id="imgDiv" class="">
+				</div>
+				<div id="personName"></div>
+				<div id="profession"></div>
+				<div id="description">
+				</div>
+			</div>
+			<div class="left-arrow-wrap arrow-wrap">
+				<div class="arrow" id="leftArrow"></div>
+			</div>
+			<div class="right-arrow-wrap arrow-wrap">
+				<div class="arrow" id="rightArrow"></div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</body>
+<!-- partial -->
+  <script>
+
+const reviewWrap = document.getElementById("reviewWrap");
+const leftArrow = document.getElementById("leftArrow");
+const rightArrow = document.getElementById("rightArrow");
+const imgDiv = document.getElementById("imgDiv");
+const personName = document.getElementById("personName");
+const profession = document.getElementById("profession");
+const description = document.getElementById("description");
+const surpriseMeBtn = document.getElementById("surpriseMeBtn");
+const chicken = document.querySelector(".chicken");
+
+let isChickenVisible;
+
+let people = [
+	{
+		photo:
+			'url("https://dainedvorak.com/assets/images/testimonials/josiphene-black-_-linkedin-photo.jpg")',
+		name: "Josiphene Black",
+		profession: "Group Director, SEO",
+		description:
+			"Daine is a unique and great asset to have on any team. His mind is the perfect combination of technical knowledge, strategic thinking, and quick execution which lead to him solving problems for his own clients and for the entire SEO team at Intouch. ....If you get the opportunity to work with Daine, you will see the impacts he has very quickly."
+	},
+
+	{
+		photo:
+			'url("https://dainedvorak.com/assets/images/testimonials/andee-lamonica-_-linkedin-photo.jpg")',
+		name: "Andee LaMonica",
+		profession: "Associate Creative Director/Copywriter",
+		description:
+			"As a writer, I cannot speak highly enough of the partnership Daine and I created while working together. Not only is he collaborative with team members and across departments, but he is dedicated to overall success for his brands and his passion for great work is infectious. It was truly a delight to work with him and one of the reasons I know how important it is for copy and SEO teams to work in parallel--I've seen the results and the potential for even more efficiencies. He made my work more enjoyable because I knew it would only be elevated with Daine's efforts. I wish I could clone him, and would love to work with him again."
+	},
+
+	{
+		photo:
+			'url("https://dainedvorak.com/assets/images/testimonials/kevin-stuart-cavanaugh-_-linkedin-photo.jpg")',
+		name: "Kevin Stuart Cavanaugh",
+		profession: "Owner at Law Firm of Kevin Stuart Cavanaugh",
+		description:
+			"Daine is a brilliant computer specialist. I think he can solve complicated problems that most people cannot....Daine was able to delete the hacker’s software so that my computer was restored and I was able to use it again."
+	},
+	{
+		photo:
+			'url("https://dainedvorak.com/assets/images/testimonials/erin-r-minne-linkedin-photo.jpg")',
+		name: "Erin Minné",
+		profession: "Lead Manager - Analytics & Insights | Woodruff",
+		description:
+			"Daine was on the same digital team as me at Woodruff, specializing in SEO. He was also an expert in all things AI automation and transformation. Daine was often a great resource when I had questions regarding ChatGPT extensions, ChatGPT best practices, or Excel formulas. He was always willing to support his greater team and solve complex problems."
+	},
+	{
+		photo:
+			'url("https://dainedvorak.com/assets/images/testimonials/jesse-brown-_-linkedin-photo.jpg")',
+		name: "Jesse Brown",
+		profession: "SEO Director",
+		description:
+			"As a leader, Daine was a teacher to those throughout our organization. He freely shared his strategic ideas and insights, giving him the ability to delegate complex efforts to internal team members and partnering SMEs. He was also able to consistently deliver top-quality results with ever-changing client expectations, needs, and deadlines."
+	},
+
+	{
+		photo:
+			'url("https://dainedvorak.com/assets/images/testimonials/andee-lamonica-_-linkedin-photo.jpg")',
+		name: "Andee LaMonica",
+		profession: "Associate Creative Director/Copywriter",
+		description:
+			"As a writer, I cannot speak highly enough of the partnership Daine and I created while working together. Not only is he collaborative with team members and across departments, but he is dedicated to overall success for his brands and his passion for great work is infectious. It was truly a delight to work with him and one of the reasons I know how important it is for copy and SEO teams to work in parallel--I've seen the results and the potential for even more efficiencies. He made my work more enjoyable because I knew it would only be elevated with Daine's efforts. I wish I could clone him, and would love to work with him again."
+	}
+];
+
+imgDiv.style.backgroundImage = people[0].photo;
+personName.innerText = people[0].name;
+profession.innerText = people[0].profession;
+description.innerText = people[0].description;
+let currentPerson = 0;
+
+//Select the side where you want to slide
+function slide(whichSide, personNumber) {
+	let reviewWrapWidth = reviewWrap.offsetWidth + "px";
+	let descriptionHeight = description.offsetHeight + "px";
+	//(+ or -)
+	let side1symbol = whichSide === "left" ? "" : "-";
+	let side2symbol = whichSide === "left" ? "-" : "";
+
+	let tl = gsap.timeline();
+
+	if (isChickenVisible) {
+		tl.to(chicken, {
+			duration: 0.4,
+			opacity: 0
+		});
+	}
+
+	tl.to(reviewWrap, {
+		duration: 0.4,
+		opacity: 0,
+		translateX: `${side1symbol + reviewWrapWidth}`
+	});
+
+	tl.to(reviewWrap, {
+		duration: 0,
+		translateX: `${side2symbol + reviewWrapWidth}`
+	});
+
+	setTimeout(() => {
+		imgDiv.style.backgroundImage = people[personNumber].photo;
+	}, 400);
+	setTimeout(() => {
+		description.style.height = descriptionHeight;
+	}, 400);
+	setTimeout(() => {
+		personName.innerText = people[personNumber].name;
+	}, 400);
+	setTimeout(() => {
+		profession.innerText = people[personNumber].profession;
+	}, 400);
+	setTimeout(() => {
+		description.innerText = people[personNumber].description;
+	}, 400);
+
+	tl.to(reviewWrap, {
+		duration: 0.4,
+		opacity: 1,
+		translateX: 0
+	});
+
+	if (isChickenVisible) {
+		tl.to(chicken, {
+			duration: 0.4,
+			opacity: 1
+		});
+	}
+}
+
+function setNextCardLeft() {
+	if (currentPerson === 3) {
+		currentPerson = 0;
+		slide("left", currentPerson);
+	} else {
+		currentPerson++;
+	}
+
+	slide("left", currentPerson);
+}
+
+function setNextCardRight() {
+	if (currentPerson === 0) {
+		currentPerson = 3;
+		slide("right", currentPerson);
+	} else {
+		currentPerson--;
+	}
+
+	slide("right", currentPerson);
+}
+
+leftArrow.addEventListener("click", setNextCardLeft);
+rightArrow.addEventListener("click", setNextCardRight);
+
+surpriseMeBtn.addEventListener("click", () => {
+	if (chicken.style.opacity === "0") {
+		chicken.style.opacity = "1";
+		imgDiv.classList.add("move-head");
+		surpriseMeBtn.innerText = "Remove the chicken";
+		surpriseMeBtn.classList.remove("surprise-me-btn");
+		surpriseMeBtn.classList.add("hide-chicken-btn");
+		isChickenVisible = true;
+	} else if (chicken.style.opacity === "1") {
+		chicken.style.opacity = "0";
+		imgDiv.classList.remove("move-head");
+		surpriseMeBtn.innerText = "Surprise me";
+		surpriseMeBtn.classList.add("surprise-me-btn");
+		surpriseMeBtn.classList.remove("hide-chicken-btn");
+		isChickenVisible = false;
+	}
+});
+
+window.addEventListener("resize", () => {
+	description.style.height = "100%";
+});
+
+</script>
+
+</body>
+</html>

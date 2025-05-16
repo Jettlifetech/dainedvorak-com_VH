@@ -8,3 +8,23 @@
 [2025-05-15 19:12:31] Submission saved successfully
 [2025-05-15 19:12:31] Success response returned to client
 [2025-05-15 19:12:31] Email process completed
+[2025-05-15 21:45:22] Email process started
+[2025-05-15 21:45:22] Form data received: {"first_name":"Daine","last_name":"Dvorak","email":"dvorakhousenetwork@gmail.com","subject":"Website Inquiry testing production webpage","message":"Hello, I would like to inquire about your services."}
+[2025-05-15 21:45:22] Configuring SMTP connection
+[2025-05-15 21:45:22] Setting email content
+[2025-05-15 21:45:22] Attempting to send email from dvorakhousenetwork@gmail.com with subject 'Website Inquiry testing production webpage'
+[2025-05-15 21:45:23] Email sent successfully
+[2025-05-15 21:45:23] Saving submission to form_submissions.json
+[2025-05-15 21:45:23] Submission saved successfully
+[2025-05-15 21:45:23] Success response returned to client
+[2025-05-15 21:45:23] Email process completed
+[2025-05-15 22:27:09] Email process started
+[2025-05-15 22:27:09] Form data received: {"first_name":"Daine","last_name":"Dvorak","email":"asdasd@gmail.com","subject":"Website Inquiryasdasd","message":"Hello, I would like to inquire about your services.asda"}
+[2025-05-15 22:27:09] Configuring SMTP connection
+[2025-05-15 22:27:09] Setting email content
+[2025-05-15 22:27:09] Attempting to send email from asdasd@gmail.com with subject 'Website Inquiryasdasd'
+[2025-05-15 22:27:10] Email sent successfully
+[2025-05-15 22:27:10] Saving submission to form_submissions.json
+[2025-05-15 22:27:10] Submission saved successfully
+[2025-05-15 22:27:10] Success response returned to client
+[2025-05-15 22:27:10] Email process completed
