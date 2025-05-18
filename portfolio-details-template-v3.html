@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insight Flow Case Study – Daine Dvorak</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at 20% 30%, #22223b 60%, #4a4e69 100%);
+      color: #fff;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      
+    }
+    .metrics-float {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      padding: 2rem 0 1rem 0;
+      position: relative;
+      z-index: 2;
+    }
+    .metric-box {
+      background: rgba(255,255,255,0.12);
+      border-radius: 1.2rem;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 4px 24px rgba(74,78,105,0.12);
+      text-align: center;
+      transition: transform 0.18s;
+    }
+    .metric-box:hover {
+      transform: translateY(-8px) scale(1.04);
+      background: #f2e9e4;
+      color: #22223b;
+    }
+    .metric-number {
+      font-size: 2.3rem;
+      font-weight: 800;
+    }
+    .metric-label {
+      color: #c9ada7;
+      font-size: 1.1rem;
+    }
+    .timeline {
+      position: relative;
+      margin: 3.5rem 0 2rem 0;
+      padding-left: 35px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      height: 100%;
+      width: 5px;
+      background: linear-gradient(180deg, #9a8c98 30%, #4a4e69 100%);
+      border-radius: 3px;
+    }
+    .timeline-step {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 1.5rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(.16,.68,.43,.99);
+    }
+    .timeline-step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -19px;
+      top: 7px;
+      width: 28px;
+      height: 28px;
+      background: #f2e9e4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #22223b;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 10px #c9ada799;
+    }
+    .timeline-content {
+      background: rgba(255,255,255,0.10);
+      border-radius: 1rem;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 1px 8px 0 #4a4e6944;
+    }
+    .charts-block {
+      margin: 2.5rem 0;
+      background: rgba(255,255,255,0.06);
+      border-radius: 2rem;
+      padding: 2.2rem 1rem 2rem 1rem;
+      box-shadow: 0 6px 32px rgba(34,34,59,0.12);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 900px) {
+      .charts-block {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .tool-icons-list {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+      margin-bottom: 2.2rem;
+    }
+    .tool-icon-item {
+      background: #4a4e69;
+      border-radius: 1rem;
+      padding: 1.1rem 1.3rem;
+      color: #fff;
+      font-size: 2.1rem;
+      box-shadow: 0 1px 6px #c9ada733;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 98px;
+      transition: background 0.18s;
+    }
+    .tool-icon-item:hover {
+      background: #f2e9e4;
+      color: #22223b;
+      transform: scale(1.06);
+    }
+    .footer-bar {
+      background: linear-gradient(90deg, #4a4e69 30%, #9a8c98 100%);
+      text-align: center;
+      padding: 2.5rem 1rem 2rem 1rem;
+      border-radius: 1.5rem 1.5rem 0 0;
+      margin-top: 3rem;
+    }
+    .footer-bar .btn {
+      margin: 0.7rem;
+      min-width: 170px;
+      font-weight: 600;
+      font-size: 1.11rem;
+    }
+    @media (max-width: 600px) {
+      .metrics-float {flex-direction: column; gap: 1.1rem;}
+      .charts-block {padding: 1.3rem .3rem;}
+    }
+     .glass-card {
+      background: rgba(30,40,70, 0.65);
+      border-radius: 2rem;
+      box-shadow: 0 4px 40px 0 rgba(54,202,255,.16), 0 1.5px 12px 0 rgba(255, 36, 168, 0.16);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(54,202,255,.18);
+      text-align: center;
+    }
+    .hero-glass {
+      background: linear-gradient(100deg, rgba(54,202,255,0.18) 40%, rgba(255,36,168,0.17) 100%);
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-anim {
+      position: absolute;
+      top: -80px; left: -60px;
+      width: 650px; height: 600px;
+      background: radial-gradient(circle at 40% 40%, #36caff88 0, #222A48 70%);
+      filter: blur(80px);
+      z-index: 1;
+      opacity: .7;
+      animation: heroBg 10s alternate infinite;
+    }
+    @keyframes heroBg {
+      0% { left: -60px; top: -80px;}
+      100% { left: 40px; top: 0;}
+    }
+     /* Interactive Results Styles */
+    .interactive-result {
+      background: rgba(255,255,255,0.10);
+      border-radius: 1.2rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 14px #36caff33;
+      cursor: pointer;
+      padding: 1.2rem 1.4rem 1.2rem 3.6rem;  /* Increased left padding for icon space */
+      position: relative;
+      transition: box-shadow .2s, transform .13s;
+      overflow: hidden;
+      text-align:center;
+    }
+    .interactive-result .icon {
+      position: absolute;
+      left: 1.2rem;  /* Slightly further right */
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem;
+      color: #36caff;
+      opacity: 0.65;
+      margin-right: 1.4rem;  /* Add space between icon and text */
+    }
+
+    .interactive-result:hover, .interactive-result:focus {
+      box-shadow: 0 4px 34px #36caff88;
+      transform: translateY(-3px) scale(1.017);
+      background: rgba(54,202,255,0.14);
+    }
+    .interactive-result .icon {
+      position: absolute;
+      left: 0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem;
+      color: #36caff;
+      opacity: 0.65;
+      margin-right: 5px;
+    }
+    .result-collapsible {
+      margin-top: 0.8rem;
+      margin-bottom: 0.7rem;
+    }
+    .stat-counter {
+      display: inline-block;
+      font-size: 2.4rem;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      color: #ff24a8;
+      background: linear-gradient(90deg,#36caff,#ff24a8 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 10px #1d1f35aa;
+      margin-right: 1.1rem;
+      margin-bottom: 5%;
+    }
+    .show-more-btn {
+      background: #36caff;
+      color: #161E2E;
+      border-radius: 1.6rem;
+      border: none;
+      font-weight: 700;
+      padding: 0.5rem 1.8rem;
+      font-size: 1.1rem;
+      margin-top: 1.3rem;
+      margin-bottom: 1rem;
+      transition: background .19s, color .15s;
+      box-shadow: 0 2px 16px #36caff55;
+    }
+    .show-more-btn:hover {
+      background: #ff24a8;
+      color: #fff;
+      box-shadow: 0 2px 24px #ff24a899;
+    }
+
+    .cta-footer {
+      background: linear-gradient(100deg, #ff24a8 10%, #36caff 100%);
+      color: #fff;
+      border-radius: 1.8rem 1.8rem 0 0;
+      box-shadow: 0 2px 22px #ff24a822;
+      margin-top: 4rem;
+      padding: 2.3rem 0;
+      text-align: center;
+    }
+    .cta-footer .btn {
+      font-size: 1.25rem;
+      padding: 0.75rem 2.4rem;
+      border-radius: 2rem;
+      background: #fff;
+      color: #161E2E;
+      border: none;
+      font-weight: 700;
+      margin: 0.5rem;
+      transition: all .2s;
+      box-shadow: 0 2px 14px #fff6;
+    }
+    .cta-footer .btn:hover {
+      background: #36caff;
+      color: #fff;
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 2px 28px #36caff99;
+    }
+        .section-img {
+      max-width: 320px;
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 32px 0 #ff24a844;
+      margin-bottom: 1.2rem;
+    }
+    .section-img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Metrics -->
+  <section class="metrics-float">
+    <div class="metric-box">
+      <div class="metric-number" data-count="1250000">0</div>
+      <div class="metric-label"><i class="bi bi-graph-up"></i> Total Impressions</div>
+    </div>
+    <div class="metric-box">
+      <div class="metric-number" data-count="305">0</div>
+      <div class="metric-label"><i class="bi bi-alarm"></i> Hours Saved</div>
+    </div>
+    <div class="metric-box">
+      <div class="metric-number" data-count="73">0</div>
+      <div class="metric-label"><i class="bi bi-rocket-takeoff"></i> Rank Uplifts</div>
+    </div>
+  </section>
+
+  <!-- Brand / Project Summary -->
+  <section class="container mt-5">
+    <div class="row align-items-center gy-4">
+      <div class="col-md-2 text-center">
+        <img src="https://dainedvorak.com/assets/img/daine-dvorak-portfolio-logo-2024.png" class="rounded-circle" style="width:60px; height:60px; border:2px solid #9a8c98; background:#fff; box-shadow:0 1px 10px #4a4e6933;">
+      </div>
+      <div class="col-md-10">
+        <h2 class="fw-bold mb-2">Project Context</h2>
+        <p>
+          Transforming a major SaaS brand's organic reach with technical SEO automation, rich result strategy, and continuous AI-driven optimization.
+        </p>
+        <p class="mb-0 text-info">
+          <strong>Team:</strong> Daine (Lead), Dev Team, Marketing Ops, AI Specialist
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Process -->
+  <section class="container">
+    <h2 class="fw-bold mb-4 mt-5">Execution Timeline</h2>
+    <div class="timeline" id="timeline">
+      <div class="timeline-step">
+        <span class="timeline-dot"><i class="bi bi-flag"></i></span>
+        <div class="timeline-content">
+          <div class="fw-bold">Discovery</div>
+          <div class="small">Technical SEO audit & KPIs defined</div>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <span class="timeline-dot"><i class="bi bi-braces"></i></span>
+        <div class="timeline-content">
+          <div class="fw-bold">Engineering</div>
+          <div class="small">Automation scripts, Schema, data pipeline</div>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <span class="timeline-dot"><i class="bi bi-lightning-charge"></i></span>
+        <div class="timeline-content">
+          <div class="fw-bold">Optimization</div>
+          <div class="small">Continuous improvements, testing</div>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <span class="timeline-dot"><i class="bi bi-robot"></i></span>
+        <div class="timeline-content">
+          <div class="fw-bold">Automation</div>
+          <div class="small">Scaling & reporting with AI</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-Width Charts Block -->
+  <section class="container-fluid charts-block">
+    <div>
+      <div class="mb-2 fw-bold text-info">Rich Result Share</div>
+      <canvas id="pieChart2"></canvas>
+    </div>
+    <div>
+      <div class="mb-2 fw-bold text-info">Keyword Velocity</div>
+      <canvas id="lineChart2"></canvas>
+    </div>
+    <div>
+      <div class="mb-2 fw-bold text-info">Productivity Gain</div>
+      <canvas id="barChart2"></canvas>
+    </div>
+  </section>
+
+  <!-- Tools Showcase -->
+  <section class="container">
+    <h2 class="fw-bold mb-3">Tool Stack</h2>
+    <div class="tool-icons-list">
+      <div class="tool-icon-item"><i class="bi bi-bar-chart"></i><div>GA4</div></div>
+      <div class="tool-icon-item"><i class="bi bi-braces-asterisk"></i><div>Schema.org</div></div>
+      <div class="tool-icon-item"><i class="bi bi-cpu"></i><div>GPT/LLM</div></div>
+      <div class="tool-icon-item"><i class="bi bi-file-earmark-code"></i><div>Apps Script</div></div>
+      <div class="tool-icon-item"><i class="bi bi-github"></i><div>GitHub</div></div>
+      <div class="tool-icon-item"><i class="bi bi-lightning"></i><div>Automation</div></div>
+    </div>
+  </section>
+
+  <!-- Results That Mattered (Interactive) -->
+  <section class="container">
+    <div class="glass-card" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <h2 class="mb-2 fw-bold" style="color:#36caff;">Results That Mattered</h2>
+
+          <div class="stat-counter" id="statCounter" data-target="43000">0</div>
+          <span style="font-size:1.1rem;color:#9fe8ff;">Monthly Organic Visits</span>
+
+          <div class="interactive-result" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail1" aria-expanded="false" aria-controls="resultDetail1">
+            <span class="icon">&#128202;</span>
+            +43% Organic Traffic Increase <span class="text-white" style="font-size:.96rem;">(Q2)</span>
+            <div class="collapse result-collapsible" id="resultDetail1">
+              <div>Expanded detail: How advanced SEO automation and on-page enhancements drove a surge in high-quality visits.</div>
+            </div>
+          </div>
+
+          <div class="interactive-result pl-3" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail2" aria-expanded="false" aria-controls="resultDetail2">
+           <span class="icon" style="margin-right:50px;">&#11088;  </span>
+              #1 SERP Ranking Achieved <span class="text-success" style="font-size:.96rem;">(6 core keywords)</span>
+            <div class="collapse result-collapsible" id="resultDetail2">
+              <div>Expanded detail: Technical schema and authoritative link-building strategies led to multiple top-3 placements.</div>
+            </div>
+          </div>
+
+          <div class="interactive-result" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail3" aria-expanded="false" aria-controls="resultDetail3">
+            <span class="icon">&#9200;</span>
+            27.5h Saved per Month (Ops Efficiency)
+            <div class="collapse result-collapsible" id="resultDetail3">
+              <div>Expanded detail: Automated workflows, batch SEO reporting, and dashboarding streamlined repetitive team tasks.</div>
+            </div>
+          </div>
+
+          <button class="show-more-btn" type="button" data-bs-toggle="collapse" data-bs-target="#moreResults" aria-expanded="false" aria-controls="moreResults">
+            Show More Stats
+          </button>
+
+          <div class="collapse" id="moreResults">
+            <div class="interactive-result mt-2" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail4" aria-expanded="false" aria-controls="resultDetail4">
+              <span class="icon">&#128200;</span>
+              350% Engagement Lift (Avg. Session Duration)
+              <div class="collapse result-collapsible" id="resultDetail4">
+                <div>Expanded detail: UX improvements and high-value content led to a sharp rise in user engagement metrics.</div>
+              </div>
+            </div>
+            <div class="interactive-result" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail5" aria-expanded="false" aria-controls="resultDetail5">
+              <span class="icon">&#128218;</span>
+              6 New SEO Playbooks Deployed
+              <div class="collapse result-collapsible" id="resultDetail5">
+                <div>Expanded detail: SOPs and playbooks helped onboard new team members 30% faster.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-flex justify-content-center">
+          <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" class="section-img shadow" alt="Results chart placeholder">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Full Width CTA Block (Replacing Testimonial Section) -->
+<section class="container-fluid p-4 mt-5">
+  <div class="w-100 cta-footer" style="border-radius: 2rem; margin-bottom:2.5rem;">
+    <span class="badge rounded-pill bg-success px-4 py-2 mb-4 fs-6" style="font-weight:700; font-size:1.15rem; background: linear-gradient(90deg,#36caff,#31db8a 90%); color: #191b32; box-shadow: 0 2px 14px #36caff99;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-briefcase-fill me-1" viewBox="0 0 16 16" style="position:relative;top:3px;">
+        <path d="M6.5 0a.5.5 0 0 0-.5.5V2h-2A1.5 1.5 0 0 0 2.5 3.5v1.378c-.591.281-1 .885-1 1.622v6A2.5 2.5 0 0 0 4 15h8a2.5 2.5 0 0 0 2.5-2.5v-6c0-.737-.409-1.34-1-1.622V3.5A1.5 1.5 0 0 0 12 2h-2V.5a.5.5 0 0 0-.5-.5h-3ZM6 2V1h4v1H6Z"/>
+      </svg>
+      Open To Work
+    </span>
+    <h2 class="h3 fw-bold mb-3 mt-2">Connect With Daine Dvorak</h2>
+    <p class="lead mb-4" style="color: #fff; max-width: 700px; margin: 0 auto;">
+      Whether you're looking for SEO leadership, automation expertise, or AI-powered innovation, Daine is ready to make an impact for your business today!
+    </p>
+    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mb-2">
+    
+            <a href="https://dainedvorak.com/portfolio" class="btn" style="background:rgba(255, 255, 255, 0.65);opacity:.85;font-weight:600;border:1.5px solid #36caff;">
+<svg xmlns="http://www.w3.org/2000/svg"   width="5%" height="auto"   viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9l0 28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5l0-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg>
+        View More Case Studies
+      </a>
+      <a href="tel:9137105841" class="btn" style="background:linear-gradient(90deg,#36caff,#ff24a8);color:#fff;font-weight:700;">
+        <svg  fill="white"  width="15%" class="mb-3" height="auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+      <br>  Click Here To Call Daine Now!
+      </a>
+  <a href="https://dainedvorak.com/assets/daine-dvorak-resume/daine-dvorak_cv_resume_ai-powered_seo_expert-daine_dvorak-compressed_updated-5-13-2025_0001.pdf" class="btn" style="background:rgba(255, 255, 255, 0.65);opacity:.85;color:#181D2F;font-weight:700;" download>
+<svg xmlns="http://www.w3.org/2000/svg"  width="5%" height="auto"  viewBox="0 0 576 512"><path d="M384 480l48 0c11.4 0 21.9-6 27.6-15.9l112-192c5.8-9.9 5.8-22.1 .1-32.1S555.5 224 544 224l-400 0c-11.4 0-21.9 6-27.6 15.9L48 357.1 48 96c0-8.8 7.2-16 16-16l117.5 0c4.2 0 8.3 1.7 11.3 4.7l26.5 26.5c21 21 49.5 32.8 79.2 32.8L416 144c8.8 0 16 7.2 16 16l0 32 48 0 0-32c0-35.3-28.7-64-64-64L298.5 96c-17 0-33.3-6.7-45.3-18.7L226.7 50.7c-12-12-28.3-18.7-45.3-18.7L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l23.7 0L384 480z"/></svg>
+        Download Daine’s Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer CTA -->
+  <footer class="footer-bar">
+    <span class="badge bg-warning text-dark mb-2 fs-6">Open To Work</span>
+    <div class="mb-3 fw-bold fs-5">Want to collaborate or learn more?</div>
+    <a href="https://dainedvorak.com/assets/dainedvorak-resume.pdf" class="btn btn-lg btn-primary" target="_blank"><i class="bi bi-file-earmark-person"></i> Resume</a>
+    <a href="mailto:dainedvorak@gmail.com" class="btn btn-lg btn-success"><i class="bi bi-calendar-week"></i> Schedule a Call</a>
+    <a href="https://dainedvorak.com/portfolio" class="btn btn-lg btn-outline-light"><i class="bi bi-collection"></i> More Case Studies</a>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Animated Counter Script -->
+  <script>
+    function animateCounter(el) {
+      const target = +el.getAttribute('data-count');
+      const duration = 1100 + Math.random() * 900;
+      let start = 0;
+      const step = Math.ceil(target / (duration / 24));
+      function update() {
+        start += step;
+        if (start >= target) {
+          el.textContent = target.toLocaleString();
+        } else {
+          el.textContent = start.toLocaleString();
+          requestAnimationFrame(update);
+        }
+      }
+      update();
+    }
+    document.querySelectorAll('.metric-number').forEach(animateCounter);
+  </script>
+  <!-- Timeline Animation -->
+  <script>
+    function revealTimelineSteps() {
+      const steps = document.querySelectorAll('.timeline-step');
+      let i = 0;
+      function nextStep() {
+        if (i < steps.length) {
+          steps[i].classList.add('visible');
+          i++;
+          setTimeout(nextStep, 450);
+        }
+      }
+      nextStep();
+    }
+    window.addEventListener('DOMContentLoaded', revealTimelineSteps);
+  </script>
+  <!-- Charts Setup -->
+  <script>
+    // Pie Chart
+    new Chart(document.getElementById('pieChart2'), {
+      type: 'pie',
+      data: {
+        labels: ['Rich Results', 'Other'],
+        datasets: [{
+          data: [67, 33],
+          backgroundColor: ['#f2e9e4', '#9a8c98'],
+          borderWidth: 1
+        }]
+      },
+      options: {plugins: {legend: {labels: {color: '#22223b'}}}}
+    });
+    // Line Chart
+    new Chart(document.getElementById('lineChart2'), {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Keywords in Top 10',
+          data: [110, 210, 300, 390, 470, 560],
+          fill: false,
+          tension: 0.3,
+          borderColor: '#9a8c98',
+          borderWidth: 3,
+          pointBackgroundColor: '#f2e9e4'
+        }]
+      },
+      options: {
+        plugins: {legend: {display: false}},
+        scales: {
+          x: {ticks: {color: '#fff'}, grid: {color: '#555'}},
+          y: {ticks: {color: '#fff'}, grid: {color: '#444'}}
+        }
+      }
+    });
+    // Bar Chart
+    new Chart(document.getElementById('barChart2'), {
+      type: 'bar',
+      data: {
+        labels: ['Manual', 'Scripted', 'Automated'],
+        datasets: [{
+          label: 'Hours',
+          data: [30, 10, 3],
+          backgroundColor: ['#9a8c98', '#c9ada7', '#f2e9e4']
+        }]
+      },
+      options: {
+        plugins: {legend: {display: false}},
+        scales: {
+          x: {ticks: {color: '#fff'}, grid: {color: '#555'}},
+          y: {ticks: {color: '#fff'}, grid: {color: '#444'}}
+        }
+      }
+    });
+  </script>
+</body>
+</html>

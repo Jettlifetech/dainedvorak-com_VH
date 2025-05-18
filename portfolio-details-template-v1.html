@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Case Study – Hero Highlight (Neon Glass v2)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate on Scroll (AOS) CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #161E2E 0%, #253c64 80%, #161E2E 100%);
+      color: #f1f6ff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+    }
+    .glass-card {
+      background: rgba(30,40,70, 0.65);
+      border-radius: 2rem;
+      box-shadow: 0 4px 40px 0 rgba(54,202,255,.16), 0 1.5px 12px 0 rgba(255, 36, 168, 0.16);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(54,202,255,.18);
+    }
+    .hero-glass {
+      background: linear-gradient(100deg, rgba(54,202,255,0.18) 40%, rgba(255,36,168,0.17) 100%);
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-anim {
+      position: absolute;
+      top: -80px; left: -60px;
+      width: 650px; height: 600px;
+      background: radial-gradient(circle at 40% 40%, #36caff88 0, #222A48 70%);
+      filter: blur(80px);
+      z-index: 1;
+      opacity: .7;
+      animation: heroBg 10s alternate infinite;
+    }
+    @keyframes heroBg {
+      0% { left: -60px; top: -80px;}
+      100% { left: 40px; top: 0;}
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: left;
+    }
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+background: #00F260;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #e3e6ed;
+      margin-bottom: 1.8rem;
+    }
+    .metric-badges {
+      display: flex; flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .metric-badge {
+      background: rgba(255,255,255,0.11);
+      border: 1.5px solid #36caff;
+      color: #fff;
+      border-radius: 1.7rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 1.5px 12px 0 #36caff44;
+      padding: 0.45rem 1.15rem;
+      opacity: 0;
+      transform: translateY(30px) scale(.92);
+      transition: .45s cubic-bezier(.5,1.75,.25,1.2);
+    }
+    .metric-badge.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .section-img {
+    /*  max-width: 320px; -- Uncomment this to make the images be much smaller in each content block */
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 32px 0 #ff24a844;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Interactive Results Styles */
+    .interactive-result {
+      background: rgba(255,255,255,0.10);
+      border-radius: 1.2rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 14px #36caff33;
+      cursor: pointer;
+      padding: 1.2rem 1.4rem 1.2rem 3.6rem;  /* Increased left padding for icon space */
+      position: relative;
+      transition: box-shadow .2s, transform .13s;
+      overflow: hidden;
+    }
+    .interactive-result .icon {
+      position: absolute;
+      left: 1.2rem;  /* Slightly further right */
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem;
+      color: #36caff;
+      opacity: 0.65;
+      margin-right: 1.4rem;  /* Add space between icon and text */
+    }
+
+    .interactive-result:hover, .interactive-result:focus {
+      box-shadow: 0 4px 34px #36caff88;
+      transform: translateY(-3px) scale(1.017);
+      background: rgba(54,202,255,0.14);
+    }
+    .interactive-result .icon {
+      position: absolute;
+      left: 0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem;
+      color: #36caff;
+      opacity: 0.65;
+      margin-right: 5px;
+    }
+    .result-collapsible {
+      margin-top: 0.8rem;
+      margin-bottom: 0.7rem;
+    }
+    .stat-counter {
+      display: inline-block;
+      font-size: 2.4rem;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      color: #ff24a8;
+      background: linear-gradient(90deg,#36caff,#ff24a8 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 10px #1d1f35aa;
+      margin-right: 1.1rem;
+    }
+    .show-more-btn {
+      background: #36caff;
+      color: #161E2E;
+      border-radius: 1.6rem;
+      border: none;
+      font-weight: 700;
+      padding: 0.5rem 1.8rem;
+      font-size: 1.1rem;
+      margin-top: 1.3rem;
+      margin-bottom: 1rem;
+      transition: background .19s, color .15s;
+      box-shadow: 0 2px 16px #36caff55;
+    }
+    .show-more-btn:hover {
+      background: #ff24a8;
+      color: #fff;
+      box-shadow: 0 2px 24px #ff24a899;
+    }
+
+    .cta-footer {
+      background: linear-gradient(100deg, #ff24a8 10%, #36caff 100%);
+      color: #fff;
+      border-radius: 1.8rem 1.8rem 0 0;
+      box-shadow: 0 2px 22px #ff24a822;
+      margin-top: 4rem;
+      padding: 2.3rem 0;
+      text-align: center;
+    }
+    .cta-footer .btn {
+      font-size: 1.25rem;
+      padding: 0.75rem 2.4rem;
+      border-radius: 2rem;
+      background: #fff;
+      color: #161E2E;
+      border: none;
+      font-weight: 700;
+      margin: 0.5rem;
+      transition: all .2s;
+      box-shadow: 0 2px 14px #fff6;
+    }
+    .cta-footer .btn:hover {
+      background: #36caff;
+      color: #fff;
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 2px 28px #36caff99;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Banner -->
+  <section class="hero-glass mb-4">
+    <div class="hero-bg-anim"></div>
+    <div class="container-fluid hero-content text-center">
+      <h1 class="hero-title mb-2 ">[Case Study Title Placeholder]</h1>
+      <div class="hero-subtitle mb-3">[One-liner summary of the project goes here. Brief, compelling value proposition.]</div>
+      <div class="metric-badges" id="metricBadges">
+        <span class="metric-badge">+43% Organic Traffic</span>
+        <span class="metric-badge">#1 Ranking Achieved</span>
+        <span class="metric-badge">27.5h Saved/Month</span>
+        <span class="metric-badge">↑ 350% Engagement</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenge -->
+  <section class="container">
+    <div class="glass-card row align-items-center" data-aos="fade-right">
+      <div class="col-lg-5 text-center mb-3 mb-lg-0">
+        <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=500&q=80" class="section-img shadow" alt="Placeholder problem visual">
+      </div>
+      <div class="col-lg-7">
+        <h2 class="mb-2 fw-bold" style="color:#36caff;">The Problem We Solved</h2>
+        <p>[Brief description of the business challenge, pain points, or opportunities identified. What was holding results back?]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="container">
+    <div class="glass-card row align-items-center flex-lg-row-reverse" data-aos="fade-left">
+      <div class="col-lg-5 text-center mb-3 mb-lg-0">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" class="section-img shadow" alt="Placeholder solution flowchart">
+      </div>
+      <div class="col-lg-7">
+        <h2 class="mb-2 fw-bold" style="color:#ff24a8;">Strategy & Execution</h2>
+        <p>[Concise overview of the approach, tools, and skills used. What did we do and how?]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results That Mattered (Interactive) -->
+  <section class="container">
+    <div class="glass-card" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <h2 class="mb-2 fw-bold" style="color:#36caff;">Results That Mattered</h2>
+
+          <div class="stat-counter" id="statCounter" data-target="43000">0</div>
+          <span style="font-size:1.1rem;color:#9fe8ff;">Monthly Organic Visits</span>
+
+          <div class="interactive-result" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail1" aria-expanded="false" aria-controls="resultDetail1">
+            <span class="icon">&#128202;</span>
+            +43% Organic Traffic Increase <span class="text-white" style="font-size:.96rem;">(Q2)</span>
+            <div class="collapse result-collapsible" id="resultDetail1">
+              <div>Expanded detail: How advanced SEO automation and on-page enhancements drove a surge in high-quality visits.</div>
+            </div>
+          </div>
+
+          <div class="interactive-result pl-3" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail2" aria-expanded="false" aria-controls="resultDetail2">
+           <span class="icon" style="margin-right:50px;">&#11088;  </span>
+              #1 SERP Ranking Achieved <span class="text-success" style="font-size:.96rem;">(6 core keywords)</span>
+            <div class="collapse result-collapsible" id="resultDetail2">
+              <div>Expanded detail: Technical schema and authoritative link-building strategies led to multiple top-3 placements.</div>
+            </div>
+          </div>
+
+          <div class="interactive-result" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail3" aria-expanded="false" aria-controls="resultDetail3">
+            <span class="icon">&#9200;</span>
+            27.5h Saved per Month (Ops Efficiency)
+            <div class="collapse result-collapsible" id="resultDetail3">
+              <div>Expanded detail: Automated workflows, batch SEO reporting, and dashboarding streamlined repetitive team tasks.</div>
+            </div>
+          </div>
+
+          <button class="show-more-btn" type="button" data-bs-toggle="collapse" data-bs-target="#moreResults" aria-expanded="false" aria-controls="moreResults">
+            Show More Stats
+          </button>
+
+          <div class="collapse" id="moreResults">
+            <div class="interactive-result mt-2" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail4" aria-expanded="false" aria-controls="resultDetail4">
+              <span class="icon">&#128200;</span>
+              350% Engagement Lift (Avg. Session Duration)
+              <div class="collapse result-collapsible" id="resultDetail4">
+                <div>Expanded detail: UX improvements and high-value content led to a sharp rise in user engagement metrics.</div>
+              </div>
+            </div>
+            <div class="interactive-result" tabindex="0" data-bs-toggle="collapse" data-bs-target="#resultDetail5" aria-expanded="false" aria-controls="resultDetail5">
+              <span class="icon">&#128218;</span>
+              6 New SEO Playbooks Deployed
+              <div class="collapse result-collapsible" id="resultDetail5">
+                <div>Expanded detail: SOPs and playbooks helped onboard new team members 30% faster.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-flex justify-content-center">
+          <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" class="section-img shadow" alt="Results chart placeholder">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Full Width CTA Block (Replacing Testimonial Section) -->
+<section class="container p-4 mt-5">
+  <div class="w-100 text-center align-items-center pb-4 pt-4" style="background:rgba(255, 255, 255, 0.65);opacity:.85;border-radius: 2rem; margin-bottom:2.5rem;">
+    <span class="badge rounded-pill bg-success px-4 py-2 mb-4 fs-6" style="font-weight:700; font-size:1.15rem; background: linear-gradient(90deg,#36caff,#31db8a 90%); color: #191b32; box-shadow: 0 2px 14px #ffffff99;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-briefcase-fill me-1" viewBox="0 0 16 16" style="position:relative;top:3px;">
+        <path d="M6.5 0a.5.5 0 0 0-.5.5V2h-2A1.5 1.5 0 0 0 2.5 3.5v1.378c-.591.281-1 .885-1 1.622v6A2.5 2.5 0 0 0 4 15h8a2.5 2.5 0 0 0 2.5-2.5v-6c0-.737-.409-1.34-1-1.622V3.5A1.5 1.5 0 0 0 12 2h-2V.5a.5.5 0 0 0-.5-.5h-3ZM6 2V1h4v1H6Z"/>
+      </svg>
+      Open To Work
+    </span>
+    <h2 class="h3 fw-bold mb-3 mt-2">Connect With Daine Dvorak</h2>
+    <p class="lead mb-4" style="color: #fff; max-width: 700px; margin: 0 auto;">
+      Whether you're looking for SEO leadership, automation expertise, or AI-powered innovation, Daine is ready to make an impact for your business today!
+    </p>
+    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mb-2">
+    
+            <a href="https://dainedvorak.com/portfolio" class="btn" style="background:rgba(255, 255, 255, 0.65);opacity:.85;font-weight:600;border:1.5px solid #36caff;">
+<svg xmlns="http://www.w3.org/2000/svg" width="25px" height="auto"   viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9l0 28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5l0-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg>
+        View More Case Studies
+      </a>
+      <a href="tel:9137105841" class="btn" style="background: radial-gradient(ellipse at center, #3da8ff, #09ff00);color:#fff;font-weight:700;">
+        <svg  fill="white" xmlns="http://www.w3.org/2000/svg" width="25px" height="auto" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+      <br>  Click Here To Call Daine Now!
+      </a>
+<a href="https://dainedvorak.com/assets/daine-dvorak-resume/daine-dvorak_cv_resume_ai-powered_seo_expert-daine_dvorak-compressed_updated-5-13-2025_0001.pdf" class="btn" style="background:rgba(255, 255, 255, 0.65);opacity:.85;font-weight:600;border:1.5px solid #36caff;" download>
+<svg xmlns="http://www.w3.org/2000/svg"  width="25px" height="auto"  viewBox="0 0 576 512"><path d="M384 480l48 0c11.4 0 21.9-6 27.6-15.9l112-192c5.8-9.9 5.8-22.1 .1-32.1S555.5 224 544 224l-400 0c-11.4 0-21.9 6-27.6 15.9L48 357.1 48 96c0-8.8 7.2-16 16-16l117.5 0c4.2 0 8.3 1.7 11.3 4.7l26.5 26.5c21 21 49.5 32.8 79.2 32.8L416 144c8.8 0 16 7.2 16 16l0 32 48 0 0-32c0-35.3-28.7-64-64-64L298.5 96c-17 0-33.3-6.7-45.3-18.7L226.7 50.7c-12-12-28.3-18.7-45.3-18.7L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l23.7 0L384 480z"/></svg>
+        Download Daine’s Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Animate metric badges in hero
+    document.addEventListener("DOMContentLoaded", function(){
+      let badges = document.querySelectorAll('.metric-badge');
+      badges.forEach((b, i) => setTimeout(() => b.classList.add('visible'), 150 * (i+1)));
+
+      // Animated stat counter
+      const stat = document.getElementById('statCounter');
+      const target = parseInt(stat.getAttribute('data-target'),10);
+      let count = 0;
+      let step = Math.ceil(target / 90);
+      function animateStat() {
+        count += step;
+        if(count > target) count = target;
+        stat.textContent = count.toLocaleString();
+        if(count < target) setTimeout(animateStat, 17);
+      }
+      animateStat();
+    });
+
+    // Initialize AOS
+    AOS.init({
+      duration: 700,
+      once: true
+    });
+  </script>
+</body>
+</html>
