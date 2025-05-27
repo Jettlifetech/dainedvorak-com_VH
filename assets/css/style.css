@@ -198,25 +198,25 @@ ul {
 
 
 .c-yellow{
-	color:rgb(255, 196, 84)
+	color:rgb(67, 97, 238)
 }
 .c-pink{
-	color:rgb(255, 81, 126)
+	color:rgb(247, 37, 133)
 }
 .c-orange{
-	color:rgb(255, 117, 74)
+	color:rgb(114, 9, 183)
 }
 .c-cyan{
 	color:rgb(0, 200, 218)
 }
 .bg-yellow{
-	background-color:rgb(255, 196, 84)
+	background-color:rgb(67, 97, 238)
 }
 .bg-pink{
-	background-color:rgb(255, 81, 126)
+	background-color:rgb(255, 0, 127)
 }
 .bg-orange{
-	background-color:rgb(255, 117, 74)
+	background-color:rgb(114, 9, 183)
 }
 .bg-cyan{
 	background-color:rgb(0, 200, 218)
@@ -273,7 +273,7 @@ ul {
 .port_heading_wrapper .port_sub_heading:after {
 	content: "";
     position: absolute;
-    background: #ffc454;
+    background: rgb(67, 97, 238);
     left: -12%;
     right: -12%;
     top: 10px;

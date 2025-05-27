@@ -34,8 +34,8 @@ try {
     $mail->Port = 587;
 
     logActivity("Setting email content");
-    $mail->setFrom('dainedvorak@gmail.com', 'Portfolio Site');
-    $mail->addAddress('dainedvorak@gmail.com'); 
+    $mail->setFrom('dainedvorak+portfolio@gmail.com', 'Portfolio Site');
+    $mail->addAddress('dainedvorak@gmail.com');
 
     $mail->isHTML(true);
     $mail->Subject = $data['subject'];
